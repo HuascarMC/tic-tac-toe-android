@@ -8,16 +8,16 @@ public abstract class Player {
 
     private String token;
 
-    public Player(String token) {
-        token = token;
+    public Player() {
+        this.token = token;
     }
 
     public abstract String getToken();
 
-    public abstract void setToken();
+    public abstract void setToken(String token);
 
-    public abstract void autoToken();
+    public abstract void autoToken(String token);
 
-    public abstract void play();
+    public abstract void play(Board board, int spot);
 
 }

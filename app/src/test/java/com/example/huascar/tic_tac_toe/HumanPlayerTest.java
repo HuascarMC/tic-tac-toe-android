@@ -15,12 +15,14 @@ public class HumanPlayerTest {
     private Board board;
     @Before
     public void before() {
-        humanPlayer = new HumanPlayer("O");
+        humanPlayer = new HumanPlayer();
+        humanPlayer.setToken("O");
         board = new Board();
     }
 
     @Test
     public void testHasToken() {
+
         assertNotNull( humanPlayer.getToken() );
     }
 
@@ -54,5 +56,6 @@ public class HumanPlayerTest {
         humanPlayer.autoToken("O");
         assertEquals( humanPlayer.getToken(), "X");
     }
+
 
 }
