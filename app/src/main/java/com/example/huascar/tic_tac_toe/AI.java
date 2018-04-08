@@ -34,4 +34,12 @@ public class AI {
     public String getOpponentToken() {
         return opponentToken;
     }
+
+    public void setOpponentToken() {
+        if(this.token == "X") {
+            opponentToken = "O";
+        } else {
+            opponentToken = "X";
+        }
+    }
 }
