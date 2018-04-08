@@ -48,7 +48,7 @@ public class GameStateTest {
 
     @Test
     public void testCheckWinTrue() {
-        newGrid = new String[]{"O", "1", "X", "O", "X", "5", "O", "7", "8"};
+        newGrid = new String[]{"O", "1", "X", "O", "X", "5","O", "7", "8"};
         board.setGrid(newGrid);
         assertEquals( gameState.checkWin(board), true );
     }

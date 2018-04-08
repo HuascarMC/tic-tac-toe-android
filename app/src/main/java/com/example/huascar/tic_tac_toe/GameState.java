@@ -18,7 +18,7 @@ public class GameState {
     public boolean checkWin(Board board) {
         int[][] winCombinations = board.getWinCombinations();
 
-        for( int i = 0; i < winCombinations.length - 1; i++ ) {
+        for( int i = 0; i < winCombinations.length; i++ ) {
             boolean combinationState = checkWinCombination(winCombinations[i], board);
 
             if( combinationState == true ) {
@@ -30,12 +30,12 @@ public class GameState {
 
     public boolean checkWinCombination(int[] combination, Board board) {
         String[] grid = board.getGrid();
-        for( int i = 0; i < combination.length - 1; i++ ) {
-            if( (grid[combination[i]] != "X") || grid[combination[i]] != "O" ) {
-                return false;
-            }
+        if( grid[combination[0]] == "X" && grid[combination[1]] == "X" && grid[combination[2]] == "X") {
+            return true;
+        } else if ( grid[combination[0]] == "O" && grid[combination[1]] == "O" && grid[combination[2]] == "O"){
+            return true;
         }
-        return true;
+        return false;
     }
 
     public boolean finished(Board board) {
