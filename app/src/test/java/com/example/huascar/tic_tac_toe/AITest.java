@@ -42,4 +42,11 @@ public class AITest {
         assertEquals( miniMax.getWinner(), "O");
     }
 
+    @Test
+    public void testHasOpponentToken() {
+        assertEquals( miniMax.getOpponentToken, null );
+    }
+
+
+
 }
