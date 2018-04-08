@@ -65,4 +65,10 @@ public class AITest {
         assertEquals( miniMax.maximizedSpot(board), '8');
     }
 
+    @Test
+    public void testMinimizedSpotCaseLosing() {
+        newGrid = new String[]{"0", "O", "X", "O", "X", "5", "O", "7", "8"};
+        board.setGrid(newGrid);
+        assertEquals( miniMax.minimizedSpot(board), '0');
+    }
 }
