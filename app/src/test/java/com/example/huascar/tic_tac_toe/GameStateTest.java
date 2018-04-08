@@ -58,4 +58,16 @@ public class GameStateTest {
         int[] winCombination = board.getWinCombinations()[0];
         assertEquals( gameState.checkWinCombination(winCombination, board), false );
     }
+
+    @Test
+    public void testCheckTieFalse() {
+        assertEquals( gameState.checkTie(board), false );
+    }
+
+    @Test
+    public void testCheckTieTrue() {
+        newGrid = new String[]{"X", "O", "X", "O", "X", "O", "O", "X", "O"};
+        board.setGrid(newGrid);
+        assertEquals( gameState.checkTie(board), true );
+    }
 }
