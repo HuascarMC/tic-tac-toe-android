@@ -31,4 +31,14 @@ public class GameStateTest {
         board.setGrid(newGrid);
         assertEquals( gameState.finished(board), true);
     }
+
+    @Test
+    public void testFinishedWithTie() {
+        String[] newGrid = new String[]{"X", "O", "X", "O", "X", "O", "O", "X", "O"};
+        board.setGrid(newGrid);
+        assertEquals( gameState.finished(board), true);
+
+    }
+
+
 }
