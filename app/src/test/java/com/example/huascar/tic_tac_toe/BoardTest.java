@@ -28,8 +28,8 @@ public class BoardTest {
 
     @Test
     public void testHasGridSizeOfNine() {
-        ArrayList grid = board.getGrid();
-        assertEquals( 9, grid.size() );
+        String[] grid = board.getGrid();
+        assertEquals( 9, grid.length );
     }
 
     @Test
