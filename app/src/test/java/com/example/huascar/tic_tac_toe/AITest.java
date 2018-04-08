@@ -47,13 +47,13 @@ public class AITest {
 
     @Test
     public void testHasOpponentToken() {
-        assertEquals( miniMax.getOpponentToken, null );
+        assertEquals( miniMax.getOpponentToken(), null );
     }
 
     @Test
     public void testSetOpponentToken() {
         miniMax.setOpponentToken();
-        assertEquals( miniMax.getOpponentToken, "O");
+        assertEquals( miniMax.getOpponentToken(), "O");
     }
 
     @Test
