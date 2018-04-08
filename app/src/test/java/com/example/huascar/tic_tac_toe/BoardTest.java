@@ -110,17 +110,24 @@ public class BoardTest {
     }
 
     @Test
-    public void setSpotWithX() {
+    public void testSetSpotWithX() {
         board.setSpot(4, "X");
         String[] grid = board.getGrid();
         assertEquals( grid[4], "X");
     }
 
     @Test
-    public void setSpotWithO() {
+    public void testSetSpotWithO() {
         board.setSpot(3, "O");
         String[] grid = board.getGrid();
         assertEquals( grid[3], "O");
+    }
+
+    @Test
+    public void testSetGrid() {
+        String[] newGrid = new String[]{"O", "1", "X", "O", "X", "5", "O", "7", "8"};
+        board.setGrid(newGrid);
+        assertEquals( board.getGrid(), newGrid);
     }
 
     @Test
