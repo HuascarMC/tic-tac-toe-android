@@ -116,6 +116,13 @@ public class BoardTest {
         assertEquals( grid[4], "X");
     }
 
+    @Test
+    public void setSpotWithO() {
+        board.setSpot(3, "O");
+        String[] grid = board.getGrid();
+        assertEquals( grid[3], "O");
+    }
+
 //    @Test
 //    public void testRest() {
 //
