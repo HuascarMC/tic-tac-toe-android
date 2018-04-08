@@ -47,6 +47,11 @@ public class AITest {
         assertEquals( miniMax.getOpponentToken, null );
     }
 
+    @Test
+    public void testGameStateProperty() {
+        assertNotNull( miniMax.gameState() );
+    }
 
+    @Test
 
 }
