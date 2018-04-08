@@ -6,6 +6,7 @@ import org.junit.Test;
 import dalvik.annotation.TestTarget;
 
 import static junit.framework.Assert.*;
+import static org.junit.Assert.assertThat;
 
 /**
  * Created by huascar on 08/04/2018.
@@ -54,11 +55,6 @@ public class AITest {
     public void testSetOpponentToken() {
         miniMax.setOpponentToken();
         assertEquals( miniMax.getOpponentToken(), "O");
-    }
-
-    @Test
-    public void testGameStateProperty() {
-        assertNotNull( miniMax.gameState() );
     }
 
     @Test

@@ -8,7 +8,7 @@ public class AI {
 
     private String token;
     private String winner;
-    private GameState gameState;
+    GameState gameState;
     private String opponentToken;
 
     public AI(String token) {
@@ -40,6 +40,16 @@ public class AI {
             opponentToken = "O";
         } else {
             opponentToken = "X";
+        }
+    }
+
+    public int getBestSpot(Board board) {
+        String[] grid = board.getGrid();
+        if ( grid[4] != "X" && grid[4] != "O") {
+            return 4;
+        } else {
+            int spot = this.maximizedSpot(board);
+            return spot;
         }
     }
 }
