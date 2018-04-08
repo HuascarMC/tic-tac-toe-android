@@ -13,6 +13,7 @@ public class GameStateTest {
 
     private GameState gameState;
     private Board board;
+    private String[] newGrid;
 
     @Before
     public void before() {
@@ -27,18 +28,27 @@ public class GameStateTest {
 
     @Test
     public void testFinishedWithWin() {
-        String[] newGrid = new String[]{"O", "1", "X", "O", "X", "5", "O", "7", "8"};
+        newGrid = new String[]{"O", "1", "X", "O", "X", "5", "O", "7", "8"};
         board.setGrid(newGrid);
-        assertEquals( gameState.finished(board), true);
+        assertEquals( gameState.finished(board), true );
     }
 
     @Test
     public void testFinishedWithTie() {
-        String[] newGrid = new String[]{"X", "O", "X", "O", "X", "O", "O", "X", "O"};
+        newGrid = new String[]{"X", "O", "X", "O", "X", "O", "O", "X", "O"};
         board.setGrid(newGrid);
-        assertEquals( gameState.finished(board), true);
+        assertEquals( gameState.finished(board), true );
 
     }
 
+    @Test
+    public void testCheckWinFalse() {
+        assertEquals( gameState.checkWin(board)[0], false );
+    }
 
+    @Test
+    public void testCheckWinTrue() {
+        newGrid = new String[] g
+        board.setGrid();
+    }
 }
