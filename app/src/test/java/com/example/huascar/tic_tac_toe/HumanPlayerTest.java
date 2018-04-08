@@ -43,4 +43,10 @@ public class HumanPlayerTest {
         assertEquals( humanPlayer.getToken(), "X" );
     }
 
+    @Test
+    public void testAutoTokenX() {
+        humanPlayer.autoToken("X");
+        assertEquals( humanPlayer.getToken(), "O");
+    }
+
 }
