@@ -25,12 +25,13 @@ public class Board {
     }
 
     public String[] getAvailableSpots() {
-        String[] result = new String[winCombinations.length + 1];
+        ArrayList<String> resultList = new ArrayList<String>();
         for(int i = 0; i < grid.length; i++) {
             if(grid[i] != "X" && grid[i] != "O") {
-                result[i] = grid[i];
+                resultList.add(grid[i]);
             }
         }
+        String[] result = resultList.toArray(new String[resultList.size()]);
         return result;
     }
 
