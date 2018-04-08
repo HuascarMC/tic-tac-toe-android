@@ -26,5 +26,10 @@ public class BoardTest {
         assertEquals( 9, grid.size() );
     }
 
+    @Test
+    public void testHasFirstWinCombination() {
+        ArrayList winCombination = board.getWinCombinations()[0];
+        assertEquals( [0, 1, 2], winCombination );
+    }
 
 }
