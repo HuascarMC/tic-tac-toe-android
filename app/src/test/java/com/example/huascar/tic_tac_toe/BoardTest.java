@@ -138,4 +138,10 @@ public class BoardTest {
         assertArrayEquals( board.getGrid(), grid );
     }
 
+    @Test
+    public void testCloneBoard() {
+        Board cloneBoard = board.clone();
+        assertEquals( cloneBoard, board );
+    }
+
 }

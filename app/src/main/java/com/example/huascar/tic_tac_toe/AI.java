@@ -52,4 +52,18 @@ public class AI {
             return spot;
         }
     }
+
+    public int maximiazedSpot(Board board) {
+        Board clonedBoard = board.clone();
+
+        int bestScore = 0;
+        int bestSpot = 0;
+        String[] availableSpots = board.getAvailableSpots();
+
+        for(String availableSpot: availableSpots) {
+            int spot = Integer.parseInt(availableSpot);
+
+            grid[spot]
+        }
+    }
 }

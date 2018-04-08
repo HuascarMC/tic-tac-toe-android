@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Created by huascar on 08/04/2018.
  */
 
-public class Board {
+public class Board implements Cloneable{
 
     private String[] grid;
     private int[][] winCombinations;
