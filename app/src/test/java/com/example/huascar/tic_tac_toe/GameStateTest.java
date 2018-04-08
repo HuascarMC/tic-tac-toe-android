@@ -43,7 +43,7 @@ public class GameStateTest {
 
     @Test
     public void testCheckWinFalse() {
-        assertEquals( gameState.checkWin(board)[0], false );
+        assertEquals( gameState.checkWin(board), false );
     }
 
     @Test
