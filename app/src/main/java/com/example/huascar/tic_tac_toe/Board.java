@@ -34,8 +34,11 @@ public class Board {
         return result;
     }
 
-    public boolean reset() {
+    public void reset() {
         grid = new String[]{"0", "1", "2", "3", "4", "5", "6", "7", "8"};
-        return true;
+    }
+
+    public void setSpot(int i, String x) {
+        grid[i] = x;
     }
 }

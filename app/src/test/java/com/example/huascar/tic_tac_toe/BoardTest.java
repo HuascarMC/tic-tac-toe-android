@@ -109,4 +109,16 @@ public class BoardTest {
         assertArrayEquals( expectedResult, availableSpots );
     }
 
+    @Test
+    public void setSpotWithX() {
+        board.setSpot(4, "X");
+        String[] grid = board.getGrid();
+        assertEquals( grid[4], "X");
+    }
+
+//    @Test
+//    public void testRest() {
+//
+//    }
+
 }
