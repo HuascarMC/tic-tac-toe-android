@@ -34,7 +34,7 @@ public class BoardTest {
 
     @Test
     public void testHasWinCombinations() {
-        assertNotNull( board.getWinCombinatinos() );
+        assertNotNull( board.getWinCombinations() );
     }
 
     @Test
@@ -96,8 +96,8 @@ public class BoardTest {
 
     @Test
     public void testHasATotalOfEightCombinations() {
-        int[] winCombinations = board.getWinCombinations();
-        assertEquals( 8, winCombinations.size() );
+        int[][] winCombinations = board.getWinCombinations();
+        assertEquals( 8, winCombinations.length );
     }
 
     @Test

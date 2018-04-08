@@ -19,4 +19,8 @@ public class Board {
     public String[] getGrid() {
         return grid;
     }
+
+    public int[][] getWinCombinations() {
+        return winCombinations;
+    }
 }
