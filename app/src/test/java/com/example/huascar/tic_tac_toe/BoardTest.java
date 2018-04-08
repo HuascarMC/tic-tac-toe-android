@@ -74,4 +74,10 @@ public class BoardTest {
         ArrayList winCombination = board.getWinCombinations()[6];
         assertEquals( [2, 4, 6],  winCombination );
     }
+
+    @Test
+    public void testHasATotalOfEightCombinations() {
+        ArrayList winCombinations = board.getWinCombinations();
+        assertEquals( 8, winCombinations.size() );
+    }
 }
