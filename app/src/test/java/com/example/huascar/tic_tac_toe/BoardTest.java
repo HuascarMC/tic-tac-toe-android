@@ -40,8 +40,14 @@ public class BoardTest {
 
     @Test
     public void testHasThirdWinCombination() {
-        ArrayList winCombination = board.getWinCombinations()[1];
+        ArrayList winCombination = board.getWinCombinations()[2];
         assertEquals( [6, 7, 8],  winCombination );
+    }
+
+    @Test
+    public void testHasFourthWinCombination() {
+        ArrayList winCombination = board.getWinCombinations()[3];
+        assertEquals( [0, 3, 6],  winCombination );
     }
 
 }
