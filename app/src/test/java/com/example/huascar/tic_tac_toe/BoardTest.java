@@ -56,4 +56,9 @@ public class BoardTest {
         assertEquals( [1, 4, 7],  winCombination );
     }
 
+    @Test
+    public void testHasSixthWinCombination() {
+        ArrayList winCombination = board.getWinCombinations()[5];
+        assertEquals( [2, 5, 8],  winCombination );
+    }
 }
