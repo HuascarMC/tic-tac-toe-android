@@ -19,4 +19,7 @@ public class AI {
     }
 
 
+    public String getToken() {
+        return token;
+    }
 }
