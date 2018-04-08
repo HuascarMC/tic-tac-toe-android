@@ -38,4 +38,10 @@ public class BoardTest {
         assertEquals( [3, 4, 5], winCombination );
     }
 
+    @Test
+    public void testHasThirdWinCombination() {
+        ArrayList winCombination = board.getWinCombinations()[1];
+        assertEquals( [6, 7, 8],  winCombination );
+    }
+
 }
