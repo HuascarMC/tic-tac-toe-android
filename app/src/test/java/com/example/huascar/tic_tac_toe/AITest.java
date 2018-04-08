@@ -53,5 +53,7 @@ public class AITest {
     }
 
     @Test
-
+    public void testBestSpotIsMiddleIfEmpty() {
+        assertEquals( self.miniMax.getBestSpot(board), 4 );
+    }
 }
