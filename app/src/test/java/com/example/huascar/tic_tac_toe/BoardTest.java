@@ -50,4 +50,10 @@ public class BoardTest {
         assertEquals( [0, 3, 6],  winCombination );
     }
 
+    @Test
+    public void testHasFifthWinCombination() {
+        ArrayList winCombination = board.getWinCombinations()[4];
+        assertEquals( [1, 4, 7],  winCombination );
+    }
+
 }
