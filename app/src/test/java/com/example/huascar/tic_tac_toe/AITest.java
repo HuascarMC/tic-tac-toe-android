@@ -41,7 +41,7 @@ public class AITest {
 
     @Test
     public void testSetsWinnerO() {
-        miniMax.setsWinner("O");
+        miniMax.setWinner("O");
         assertEquals( miniMax.getWinner(), "O");
     }
 
