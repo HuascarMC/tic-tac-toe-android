@@ -80,4 +80,10 @@ public class BoardTest {
         ArrayList winCombinations = board.getWinCombinations();
         assertEquals( 8, winCombinations.size() );
     }
+
+    @Test
+    public void testGetAvailableSpots() {
+        ArrayList availableSpots = board.getAvailableSpots();
+        assertEquals( 9 , availableSpots );
+    }
 }
