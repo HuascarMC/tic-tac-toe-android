@@ -32,10 +32,15 @@ public class HumanPlayerTest {
     }
 
     @Test
-    public void testSetToken() {
+    public void testSetTokenO() {
         humanPlayer.setToken("O");
-        assertEquals( humanPlayer.getToken(), "O");
+        assertEquals( humanPlayer.getToken(), "O" );
     }
 
+    @Test
+    public void testSetTokenX() {
+        humanPlayer.setToken("X");
+        assertEquals( humanPlayer.getToken(), "X" );
+    }
 
 }
