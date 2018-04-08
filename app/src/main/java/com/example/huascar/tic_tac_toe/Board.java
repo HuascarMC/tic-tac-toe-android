@@ -17,7 +17,7 @@ public class Board {
     }
 
     public String[] getGrid() {
-        return grid;s
+        return grid;
     }
 
     public int[][] getWinCombinations() {
@@ -40,5 +40,9 @@ public class Board {
 
     public void setSpot(int i, String x) {
         grid[i] = x;
+    }
+
+    public void setGrid(String[] grid) {
+        this.grid = grid;
     }
 }
