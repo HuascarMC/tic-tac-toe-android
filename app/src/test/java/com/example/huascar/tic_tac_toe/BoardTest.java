@@ -32,4 +32,10 @@ public class BoardTest {
         assertEquals( [0, 1, 2], winCombination );
     }
 
+    @Test
+    public void testHasSecondWinCombination() {
+        ArrayList winCombination = board.getWinCombinations()[1];
+        assertEquals( [3, 4, 5], winCombination );
+    }
+
 }
