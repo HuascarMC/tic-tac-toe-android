@@ -99,8 +99,7 @@ public class BoardTest {
     }
 
     @Test
-    public void testBoardResets() {
-        board.reset();
-        assertEquals( );
+    public void testHasResetMethod() {
+        assertNotNull( board.reset() );
     }
 }
