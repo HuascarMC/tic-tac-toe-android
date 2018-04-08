@@ -39,62 +39,70 @@ public class BoardTest {
 
     @Test
     public void testHasFirstWinCombination() {
-        ArrayList winCombination = board.getWinCombinations()[0];
-        assertEquals( [0, 1, 2], winCombination );
+        int[] winCombination = board.getWinCombinations()[0];
+        int[] expectedResult = new int[]{0, 1, 2};
+        assertEquals( expectedResult, winCombination );
     }
 
     @Test
     public void testHasSecondWinCombination() {
-        ArrayList winCombination = board.getWinCombinations()[1];
-        assertEquals( [3, 4, 5], winCombination );
+        int[] winCombination = board.getWinCombinations()[1];
+        int[] expectedResult = new int[]{3, 4, 5};
+        assertEquals( expectedResult, winCombination );
     }
 
     @Test
     public void testHasThirdWinCombination() {
-        ArrayList winCombination = board.getWinCombinations()[2];
-        assertEquals( [6, 7, 8],  winCombination );
+        int[] winCombination = board.getWinCombinations()[2];
+        int[] expectedResult = new int[]{6, 7, 8};
+        assertEquals( expectedResult, winCombination );
     }
 
     @Test
     public void testHasFourthWinCombination() {
-        ArrayList winCombination = board.getWinCombinations()[3];
-        assertEquals( [0, 3, 6],  winCombination );
+        int[] winCombination = board.getWinCombinations()[3];
+        int[] expectedResult = new int[]{0, 3, 6};
+        assertEquals( expectedResult, winCombination );
     }
 
     @Test
     public void testHasFifthWinCombination() {
-        ArrayList winCombination = board.getWinCombinations()[4];
-        assertEquals( [1, 4, 7],  winCombination );
+        int[] winCombination = board.getWinCombinations()[4];
+        int[] expectedResult = new int[]{1, 4, 7};
+        assertEquals( expectedResult, winCombination );
     }
 
     @Test
     public void testHasSixthWinCombination() {
-        ArrayList winCombination = board.getWinCombinations()[5];
-        assertEquals( [2, 5, 8],  winCombination );
+        int[] winCombination = board.getWinCombinations()[5];
+        int[] expectedResult = new int[]{2, 5, 8};
+        assertEquals( expectedResult, winCombination );
     }
 
     @Test
     public void testHasSeventhWinCombination() {
-        ArrayList winCombination = board.getWinCombinations()[6];
-        assertEquals( [0, 4, 8],  winCombination );
+        int[] winCombination = board.getWinCombinations()[6];
+        int[] expectedResult = new int[]{0, 4, 8};
+        assertEquals( expectedResult, winCombination );
     }
 
 
     @Test
     public void testHasEigthWinCombination() {
-        ArrayList winCombination = board.getWinCombinations()[6];
-        assertEquals( [2, 4, 6],  winCombination );
+        int[] winCombination = board.getWinCombinations()[6];
+        int[] expectedResult = new int[]{2, 4, 6};
+        assertEquals( expectedResult, winCombination );
     }
 
     @Test
     public void testHasATotalOfEightCombinations() {
-        ArrayList winCombinations = board.getWinCombinations();
+        int[] winCombinations = board.getWinCombinations();
         assertEquals( 8, winCombinations.size() );
     }
 
     @Test
     public void testGetAvailableSpots() {
-        ArrayList availableSpots = board.getAvailableSpots();
+        int[] availableSpots = board.getAvailableSpots();
         assertEquals( 9 , availableSpots );
     }
 
