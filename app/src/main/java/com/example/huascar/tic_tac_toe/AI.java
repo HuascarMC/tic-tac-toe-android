@@ -22,4 +22,8 @@ public class AI {
     public String getToken() {
         return token;
     }
+
+    public String getWinner() {
+        return winner;
+    }
 }
