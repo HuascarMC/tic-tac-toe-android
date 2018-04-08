@@ -6,6 +6,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.assertNotNull;
 
 /**
  * Created by huascar on 08/04/2018.
@@ -22,8 +23,18 @@ public class BoardTest {
 
     @Test
     public void testHasGrid() {
+        assertNotNull( board.getGrid() );
+    }
+
+    @Test
+    public void testHasGridSizeOfNine() {
         ArrayList grid = board.getGrid();
         assertEquals( 9, grid.size() );
+    }
+
+    @Test
+    public void testHasWinCombinations() {
+        assertNotNull( board.getWinCombinatinos() );
     }
 
     @Test
@@ -85,5 +96,11 @@ public class BoardTest {
     public void testGetAvailableSpots() {
         ArrayList availableSpots = board.getAvailableSpots();
         assertEquals( 9 , availableSpots );
+    }
+
+    @Test
+    public void testBoardResets() {
+        board.reset();
+        assertEquals( );
     }
 }
