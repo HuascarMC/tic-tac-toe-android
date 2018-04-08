@@ -51,6 +51,12 @@ public class AITest {
     }
 
     @Test
+    public void testSetOpponentToken() {
+        miniMax.setOpponentToken();
+        assertEquals( miniMax.getOpponentToken, "O");
+    }
+
+    @Test
     public void testGameStateProperty() {
         assertNotNull( miniMax.gameState() );
     }
@@ -79,8 +85,4 @@ public class AITest {
         assertEquals( miniMax.getScore(board), 0 );
     }
 
-    @Test
-    public void testGetRandomSpot() {
-
-    }
 }
