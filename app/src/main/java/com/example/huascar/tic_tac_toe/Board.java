@@ -48,7 +48,8 @@ public class Board implements Cloneable {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return (Board) super.clone();
+    public Object clone() throws CloneNotSupportedException {
+        Board clone = (Board) super.clone();
+        return clone;
     }
 }

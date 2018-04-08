@@ -138,5 +138,10 @@ public class BoardTest {
         assertArrayEquals( board.getGrid(), grid );
     }
 
+    @Test
+    public void testCloneBoard() throws CloneNotSupportedException {
+        Board cloneBoard = (Board) board.clone();
+        assertEquals( cloneBoard, board );
+    }
 
 }
