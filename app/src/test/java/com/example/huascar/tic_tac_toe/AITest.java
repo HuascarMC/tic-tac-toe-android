@@ -20,12 +20,12 @@ public class AITest {
     @Before
     public void before() {
         board = new Board();
-        miniMax = new Minimax("X");
+        miniMax = new AI("X");
     }
 
     @Test
     public void testHasToken() {
-        assertEquals( mimiMax.getToken(), "X" );
+        assertEquals( miniMax.getToken(), "X" );
     }
 
     @Test
