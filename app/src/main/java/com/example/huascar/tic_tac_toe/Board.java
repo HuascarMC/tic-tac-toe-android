@@ -23,4 +23,14 @@ public class Board {
     public int[][] getWinCombinations() {
         return winCombinations;
     }
+
+    public String[] getAvailableSpots() {
+        String[] result = new String[winCombinations.length];
+        for(int i = 0; i < grid.length; i++) {
+            if(grid[i] != "X" && grid[i] != "O") {
+                result[i] = grid[i];
+            }
+        }
+        return result;
+    }
 }

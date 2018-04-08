@@ -102,8 +102,8 @@ public class BoardTest {
 
     @Test
     public void testGetAvailableSpots() {
-        int[] availableSpots = board.getAvailableSpots();
-        assertEquals( 9 , availableSpots );
+        String[] availableSpots = board.getAvailableSpots();
+        assertEquals( 9 , availableSpots.length );
     }
 
     @Test
