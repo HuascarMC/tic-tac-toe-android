@@ -32,9 +32,14 @@ public class AITest {
 
     @Test
     public void testSetsWinnerX() {
-        miniMax.setWinner("X")
+        miniMax.setWinner("X");
         assertEquals( miniMax.getWinner(), "X" );
     }
 
+    @Test
+    public void testSetsWinnerO() {
+        miniMax.setsWinner("O");
+        assertEquals( miniMax.getWinner(), "O");
+    }
 
 }
