@@ -123,9 +123,12 @@ public class BoardTest {
         assertEquals( grid[3], "O");
     }
 
-//    @Test
-//    public void testRest() {
-//
-//    }
+    @Test
+    public void testRest() {
+        board.setSpot(3, "O");
+        String[] grid = new String[]{"0", "1", "2", "3", "4", "5", "6", "7", "8"};
+        board.reset();
+        assertArrayEquals( board.getGrid(), grid );
+    }
 
 }
