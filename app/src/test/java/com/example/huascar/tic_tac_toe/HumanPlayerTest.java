@@ -13,12 +13,13 @@ public class HumanPlayerTest {
 
     private HumanPlayer humanPlayer;
     private Board board;
+
     @Before
     public void before() {
         humanPlayer = new HumanPlayer();
         humanPlayer.setToken("O");
-        board = new Board();
-    }
+    board = new Board();
+}
 
     @Test
     public void testHasToken() {
