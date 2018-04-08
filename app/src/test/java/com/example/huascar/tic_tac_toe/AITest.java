@@ -3,6 +3,8 @@ package com.example.huascar.tic_tac_toe;
 import org.junit.Before;
 import org.junit.Test;
 
+import dalvik.annotation.TestTarget;
+
 import static junit.framework.Assert.*;
 
 /**
@@ -70,5 +72,15 @@ public class AITest {
         newGrid = new String[]{"0", "O", "X", "O", "X", "5", "O", "7", "8"};
         board.setGrid(newGrid);
         assertEquals( miniMax.minimizedSpot(board), '0');
+    }
+
+    @Test
+    public void testGetScore() {
+        assertEquals( miniMax.getScore(board), 0 );
+    }
+
+    @Test
+    public void testGetRandomSpot() {
+
     }
 }
