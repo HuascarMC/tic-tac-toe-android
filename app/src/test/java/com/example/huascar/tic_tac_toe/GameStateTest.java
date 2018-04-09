@@ -75,6 +75,7 @@ public class GameStateTest {
     public void testGetWinner() {
         newGrid = new String[]{"O", "1", "X", "O", "X", "5", "O", "7", "8"};
         board.setGrid(newGrid);
-        assertEquals( gameState.getWinner(), "O" );
+        gameState.finished(board);
+        assertEquals( gameState.getWinnerToken(), "O" );
     }
 }

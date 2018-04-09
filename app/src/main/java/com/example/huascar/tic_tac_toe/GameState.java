@@ -6,6 +6,12 @@ package com.example.huascar.tic_tac_toe;
 
 public class GameState {
 
+    private String winner;
+
+    public GameState() {
+        this.winner = null;
+    }
+
     public boolean checkTie(Board board) {
         String[] availableSpots = board.getAvailableSpots();
 
@@ -43,5 +49,13 @@ public class GameState {
             return true;
         }
         return false;
+    }
+
+    public String getWinnerToken() {
+        return winner;
+    }
+
+    public void setWinnerToken(String token) {
+        winner = token;
     }
 }

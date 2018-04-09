@@ -78,12 +78,18 @@ public class AI {
                 }
             }
         }
-        return bestSpot
+        return bestSpot;
     }
 
     public int getScore(Board board) {
         if( gameState.finished(board) ) {
-            setWinner( );
+            setWinner(gameState.getWinnerToken());
+            if( winner == token) {
+                return 1;
+            } else if ( winner == opponentToken ) {
+                return -1;
+            }
         }
+        return 0;
     }
 }
