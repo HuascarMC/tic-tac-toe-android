@@ -63,9 +63,38 @@ public class AI {
 
                 boardClone = (Board) board.clone();
 
-                if( bestScore == 0 || score > bestScore) {
+                if( bestScore == 0 || score > bestScore ) {
                     bestScore = score;
                     bestSpot = minimizedSpot;
+                }
+            }
+        }
+        return bestSpot;
+    }
+
+    public int minimizedSpot(Board board) throws CloneNotSupportedException {
+        Board boardClone = (Board) board.clone();
+
+        int bestScore = 0;
+        int bestSpot = 0;
+        int score = 0;
+
+        String[] availableSpots = boardClone.getAvailableSpots();
+
+        for(String availableSpot: availableSpots) {
+            int spot = Integer.parseInt(availableSpot);
+            board.setSpot(spot, this.opponentToken);
+
+            if( gameState.finished(boardClone) ) {
+                score = this.getScore(boardClone);
+            } else {
+                int maximizedSpot = this.maximiazedSpot(boardClone);
+
+                boardClone = (Board) board.clone();
+
+                if( bestScore == 0 || score > bestScore ) {
+                    bestScore = score;
+                    bestSpot = maximizedSpot;
                 }
             }
         }
