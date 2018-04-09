@@ -48,6 +48,7 @@ public class AI {
 
         int bestScore = 0;
         int bestSpot = 0;
+        int score = 0;
 
         String[] availableSpots = boardClone.getAvailableSpots();
 
@@ -56,7 +57,7 @@ public class AI {
             board.setSpot(spot, this.token);
 
             if( gameState.finished(boardClone) ) {
-                int score = this.getScore(boardClone);
+                score = this.getScore(boardClone);
             } else {
                 int minimizedSpot = this.minimizedSpot(boardClone);
 
