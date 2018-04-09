@@ -78,4 +78,11 @@ public class GameStateTest {
         gameState.finished(board);
         assertEquals( gameState.getWinnerToken(), "O" );
     }
+
+    @Test
+    public void testSetWinnerX() {
+        gameState.setWinnerToken("X");
+        assertEquals( gameState.getWinnerToken(), "X");
+    }
+
 }

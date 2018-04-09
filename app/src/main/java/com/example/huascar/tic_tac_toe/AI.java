@@ -7,13 +7,11 @@ package com.example.huascar.tic_tac_toe;
 public class AI {
 
     private String token;
-    private String winner;
     GameState gameState;
     private String opponentToken;
 
     public AI(String token) {
         this.token = token;
-        this.winner = null;
         this.gameState = new GameState();
         this.opponentToken = null;
     }
@@ -75,10 +73,10 @@ public class AI {
 
     public int getScore(Board board) {
         if( gameState.finished(board) ) {
-            setWinner(gameState.getWinnerToken());
-            if( winner == token) {
+            String winnerToken = (gameState.getWinnerToken());
+            if( winnerToken == token ) {
                 return 1;
-            } else if ( winner == opponentToken ) {
+            } else if ( winnerToken == opponentToken ) {
                 return -1;
             }
         }
