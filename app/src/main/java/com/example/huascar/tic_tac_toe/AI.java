@@ -45,7 +45,7 @@ public class AI {
 
     public int getBestSpot(Board board) {
         String[] grid = board.getGrid();
-        if ( grid[4] != "X" && grid[4] != "O") {
+        if( grid[4] != "X" && grid[4] != "O") {
             return 4;
         } else {
             int spot = this.maximizedSpot(board);
@@ -79,5 +79,11 @@ public class AI {
             }
         }
         return bestSpot
+    }
+
+    public int getScore(Board board) {
+        if( gameState.finished(board) ) {
+            setWinner( );
+        }
     }
 }
