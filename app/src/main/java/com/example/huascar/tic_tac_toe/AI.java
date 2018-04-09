@@ -23,14 +23,6 @@ public class AI {
         return token;
     }
 
-    public String getWinner() {
-        return winner;
-    }
-
-    public void setWinner(String winner) {
-        this.winner = winner;
-    }
-
     public String getOpponentToken() {
         return opponentToken;
     }

@@ -30,23 +30,6 @@ public class AITest {
     }
 
     @Test
-    public void testHasWinnerProperty() {
-        assertEquals( miniMax.getWinner(), null );
-    }
-
-    @Test
-    public void testSetsWinnerX() {
-        miniMax.setWinner("X");
-        assertEquals( miniMax.getWinner(), "X" );
-    }
-
-    @Test
-    public void testSetsWinnerO() {
-        miniMax.setWinner("O");
-        assertEquals( miniMax.getWinner(), "O");
-    }
-
-    @Test
     public void testHasOpponentToken() {
         assertEquals( miniMax.getOpponentToken(), null );
     }
