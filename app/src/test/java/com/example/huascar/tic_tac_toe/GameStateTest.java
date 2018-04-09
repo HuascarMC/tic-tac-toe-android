@@ -85,4 +85,10 @@ public class GameStateTest {
         assertEquals( gameState.getWinnerToken(), "X");
     }
 
+    @Test
+    public void testSetWinnerO() {
+        gameState.setWinnerToken("O");
+        assertEquals( gameState.getWinnerToken(), "O");
+    }
+
 }
