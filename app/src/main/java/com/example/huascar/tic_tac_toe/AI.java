@@ -56,7 +56,7 @@ public class AI {
 
         for(String availableSpot: availableSpots) {
             int spot = Integer.parseInt(availableSpot);
-            board.setSpot(spot, this.token);
+            boardClone.setSpot(spot, this.token);
 
             if( gameState.finished(boardClone) ) {
                 score = this.getScore(boardClone);
@@ -85,7 +85,7 @@ public class AI {
 
         for(String availableSpot: availableSpots) {
             int spot = Integer.parseInt(availableSpot);
-            board.setSpot(spot, this.opponentToken);
+            boardClone.setSpot(spot, this.opponentToken);
 
             if( gameState.finished(boardClone) ) {
                 score = this.getScore(boardClone);
