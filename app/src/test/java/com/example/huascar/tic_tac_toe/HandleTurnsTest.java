@@ -21,4 +21,10 @@ public class HandleTurnsTest {
     public void testHasCurrentPlayerTokenProperty() {
         assertThat( handleTurns, hasProperty(currentPlayerToken) );
     }
+
+    @Test
+    public void testSetsCurrentPlayerToken() {
+        handleTurns.setCurrentPlayerToken("X");
+        assertEquals( handleTurns.getCurrentPlayerToken, "X" );
+    }
 }
