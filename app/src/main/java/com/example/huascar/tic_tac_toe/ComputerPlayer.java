@@ -42,7 +42,7 @@ public class ComputerPlayer extends Player {
 
     public void initializeAI() {
         if( token != null ) {
-            AI = new AI(token);
+            this.AI = new AI(token);
         }
     }
 
