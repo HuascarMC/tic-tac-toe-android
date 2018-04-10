@@ -31,7 +31,7 @@ public class AITest {
 
     @Test
     public void testHasOpponentToken() {
-        assertEquals( miniMax.getOpponentToken(), null );
+        assertEquals( miniMax.getOpponentToken(), "O" );
     }
 
     @Test
@@ -41,19 +41,19 @@ public class AITest {
     }
 
     @Test
-    public void testBestSpotIsMiddleIfEmpty() {
+    public void testBestSpotIsMiddleIfEmpty() throws CloneNotSupportedException {
         assertEquals( miniMax.getBestSpot(board), 4 );
     }
 
     @Test
-    public void testMaximizedSpotCaseWinning() {
+    public void testMaximizedSpotCaseWinning() throws CloneNotSupportedException {
         newGrid = new String[]{"X", "O", "X", "O", "X", "5","O", "7", "8"};
         board.setGrid(newGrid);
         assertEquals( miniMax.maximizedSpot(board), '8');
     }
 
     @Test
-    public void testMinimizedSpotCaseLosing() {
+    public void testMinimizedSpotCaseLosing() throws CloneNotSupportedException {
         newGrid = new String[]{"0", "O", "X", "O", "X", "5", "O", "7", "8"};
         board.setGrid(newGrid);
         assertEquals( miniMax.minimizedSpot(board), '0');

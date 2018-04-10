@@ -33,7 +33,7 @@ public class AI {
         }
     }
 
-    public int getBestSpot(Board board) {
+    public int getBestSpot(Board board) throws CloneNotSupportedException {
         String[] grid = board.getGrid();
         if( grid[4] != "X" && grid[4] != "O") {
             return 4;
@@ -43,7 +43,7 @@ public class AI {
         }
     }
 
-    public int maximiazedSpot(Board board) throws CloneNotSupportedException {
+    public int maximizedSpot(Board board) throws CloneNotSupportedException {
         Board boardClone = (Board) board.clone();
 
         int bestScore = 0;
@@ -88,7 +88,7 @@ public class AI {
             if( gameState.finished(boardClone) ) {
                 score = this.getScore(boardClone);
             } else {
-                int maximizedSpot = this.maximiazedSpot(boardClone);
+                int maximizedSpot = maximizedSpot(boardClone);
 
                 boardClone = (Board) board.clone();
 
