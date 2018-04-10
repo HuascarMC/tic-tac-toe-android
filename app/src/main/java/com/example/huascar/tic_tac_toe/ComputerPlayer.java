@@ -30,6 +30,10 @@ public class ComputerPlayer extends Player {
         }
     }
 
+    public void play(Board board) {
+        int spot =
+    }
+
     public void play(Board board, int spot) {
         board.setSpot(spot, token);
     }

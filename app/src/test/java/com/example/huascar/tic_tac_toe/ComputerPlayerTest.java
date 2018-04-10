@@ -31,9 +31,16 @@ public class ComputerPlayerTest {
 
     @Test
     public void testPlayGridFour() {
-        computerPlayer.play(board);
+        computerPlayer.play(board, 4);
         String[] grid = board.getGrid();
         assertEquals( computerPlayer.getToken(), grid[4] );
+    }
+
+    @Test
+    public void testPlaySmart() {
+        computerPlayer.play(board);
+        String[] grid = board.getGrid();
+        assertEquals( computerPlayer.getToken(), grid[4]);
     }
 
     @Test
