@@ -4,6 +4,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.Assert.*;
+import static org.hamcrest.core.IsInstanceOf.instanceOf;
+import static org.junit.Assert.assertThat;
 
 /**
  * Created by huascar on 08/04/2018.
@@ -60,7 +62,6 @@ public class ComputerPlayerTest {
 
     @Test
     public void testInitializeAI() {
-        String token = computerPlayer.getToken();
-        assertNotNull( computerPlayer.AI );
+        assertThat( computerPlayer.AI, instanceOf(AI.class) );
     }
 }

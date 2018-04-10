@@ -34,4 +34,10 @@ public class ComputerPlayer extends Player {
         board.setSpot(spot, token);
     }
 
+    public void initializeAI() {
+        if( token != null ) {
+            AI = new AI(token);
+        }
+    }
+
 }
