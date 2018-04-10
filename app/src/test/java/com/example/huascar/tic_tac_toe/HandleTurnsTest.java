@@ -44,5 +44,11 @@ public class HandleTurnsTest {
         assertEquals( token, "O");
     }
 
-
+    @Test
+    public void testChangesCurrentPlayerTokenO() {
+        handleTurns.setCurrentPlayerToken("O");
+        handleTurns.change();
+        String token = handleTurns.getCurrentPlayerToken();
+        assertEquals( token, "X");
+    }
 }
