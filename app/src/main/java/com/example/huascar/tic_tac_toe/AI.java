@@ -14,6 +14,8 @@ public class AI {
         this.token = token;
         this.gameState = new GameState();
         this.opponentToken = null;
+
+        setOpponentToken();
     }
 
 
