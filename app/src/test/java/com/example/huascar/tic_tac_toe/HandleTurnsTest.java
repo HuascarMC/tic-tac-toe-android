@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static android.telecom.Call.Details.hasProperty;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
 /**
@@ -34,4 +35,14 @@ public class HandleTurnsTest {
         String token = handleTurns.getCurrentPlayerToken();
         assertEquals( token, "X" );
     }
+
+    @Test
+    public void testChangesCurrentPlayerTokenX() {
+        handleTurns.setCurrentPlayerToken("X");
+        handleTurns.change();
+        String token = handleTurns.getCurrentPlayerToken();
+        assertEquals( token, "O");
+    }
+
+
 }
