@@ -20,4 +20,12 @@ public class HandleTurns {
     public void setCurrentPlayerToken(String token) {
         this.currentPlayerToken = token;
     }
+
+    public void change() {
+        if ( this.currentPlayerToken == "X" ) {
+            this.setCurrentPlayerToken("O");
+        } else {
+            this.setCurrentPlayerToken("X");
+        }
+    }
 }
