@@ -30,10 +30,10 @@ public class ComputerPlayerTest {
     }
 
     @Test
-    public void testPlayGridOne() {
-        computerPlayer.play(board, 0);
+    public void testPlayGridFour() {
+        computerPlayer.play(board);
         String[] grid = board.getGrid();
-        assertEquals( computerPlayer.getToken(), grid[0] );
+        assertEquals( computerPlayer.getToken(), grid[4] );
     }
 
     @Test
