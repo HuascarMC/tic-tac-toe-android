@@ -23,8 +23,15 @@ public class HandleTurnsTest {
     }
 
     @Test
+    public void testGetCurrentPlayerToken() {
+        String token = handleTurns.getCurrentPlayerToken();
+        assertEquals( token, "X")
+    }
+
+    @Test
     public void testSetsCurrentPlayerToken() {
         handleTurns.setCurrentPlayerToken("X");
-        assertEquals( handleTurns.getCurrentPlayerToken, "X" );
+        String token = handleTurns.getCurrentPlayerToken();
+        assertEquals( token, "X" );
     }
 }
