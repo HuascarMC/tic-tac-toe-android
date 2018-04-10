@@ -45,7 +45,7 @@ public class AI {
         }
     }
 
-    public int maximizedSpot(Board board) throws CloneNotSupportedException {
+    public Object[] maximizedSpot(Board board) throws CloneNotSupportedException {
         Board boardClone = (Board) board.clone();
 
         int bestScore = 0;
@@ -71,7 +71,8 @@ public class AI {
                 }
             }
         }
-        return bestSpot;
+        Object[] result = new Object[]{bestSpot, score};
+        return result;
     }
 
     public int minimizedSpot(Board board) throws CloneNotSupportedException {
