@@ -26,7 +26,7 @@ public class HandleTurnsTest {
     @Test
     public void testGetCurrentPlayerToken() {
         String token = handleTurns.getCurrentPlayerToken();
-        assertEquals( token, "X")
+        assertEquals( token, null);
     }
 
     @Test
