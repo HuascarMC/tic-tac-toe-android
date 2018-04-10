@@ -13,6 +13,8 @@ import static org.junit.Assert.assertThat;
 
 public class HandleTurnsTest {
 
+    private HandleTurns handleTurns;
+
     @Before
     public void before() {
         handleTurns = new HandleTurns();
@@ -20,7 +22,8 @@ public class HandleTurnsTest {
 
     @Test
     public void testHasCurrentPlayerTokenProperty() {
-        assertThat( handleTurns, hasProperty(currentPlayerToken) );
+        String currentPlayerToken = handleTurns.getCurrentPlayerToken();
+        assertEquals( currentPlayerToken , null );
     }
 
     @Test
