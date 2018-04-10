@@ -96,7 +96,7 @@ public class AI {
             }
             boardClone = (Board) board.clone();
 
-            if (bestScore == 0 || score > bestScore) {
+            if (bestScore == 0 || score < bestScore) {
                 bestScore = score;
                 bestSpot = availableSpot;
             }
