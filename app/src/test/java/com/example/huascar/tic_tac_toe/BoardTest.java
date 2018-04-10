@@ -141,7 +141,9 @@ public class BoardTest {
     @Test
     public void testCloneBoard() throws CloneNotSupportedException {
         Board cloneBoard = (Board) board.clone();
-        assertEquals( cloneBoard, board );
+        String[] grid = board.getGrid();
+        String[] cloneGrid = cloneBoard.getGrid();
+        assertEquals( grid, cloneGrid );
     }
 
 }

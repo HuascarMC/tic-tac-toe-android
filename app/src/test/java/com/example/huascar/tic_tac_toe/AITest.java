@@ -3,6 +3,8 @@ package com.example.huascar.tic_tac_toe;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import dalvik.annotation.TestTarget;
 
 import static junit.framework.Assert.*;
@@ -47,16 +49,22 @@ public class AITest {
 
     @Test
     public void testMaximizedSpotCaseWinning() throws CloneNotSupportedException {
-        newGrid = new String[]{"X", "O", "X", "O", "X", "5","O", "7", "8"};
+        newGrid = new String[]{"X", "O", "X",
+                               "O", "X", "5",
+                               "O", "7", "8"};
         board.setGrid(newGrid);
-        assertEquals( miniMax.maximizedSpot(board), '8');
+        Object[] result = new Object[]{"8", 1};
+        assertEquals( miniMax.maximizedSpot(board)[0], result[0]);
     }
 
     @Test
     public void testMinimizedSpotCaseLosing() throws CloneNotSupportedException {
-        newGrid = new String[]{"0", "O", "X", "O", "X", "5", "O", "7", "8"};
+        newGrid = new String[]{"0", "O", "X",
+                               "O", "X", "5",
+                               "O", "7", "8"};
         board.setGrid(newGrid);
-        assertEquals( miniMax.minimizedSpot(board), '0');
+        Object[] result = new Object[]{"0", -1};
+        assertEquals( miniMax.minimizedSpot(board)[0], result[0]);
     }
 
     @Test
