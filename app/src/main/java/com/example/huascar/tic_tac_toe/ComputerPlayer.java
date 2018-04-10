@@ -20,6 +20,7 @@ public class ComputerPlayer extends Player {
 
     public void setToken(String token) {
         this.token = token;
+        this.initializeAI();
     }
 
     public void autoToken(String token) {

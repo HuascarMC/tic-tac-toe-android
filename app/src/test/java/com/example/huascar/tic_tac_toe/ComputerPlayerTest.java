@@ -81,7 +81,8 @@ public class ComputerPlayerTest {
 
     @Test
     public void testInitializesAIWhenTokenIsSet() {
-
-
+        ComputerPlayer computerPlayer = new ComputerPlayer();
+        computerPlayer.setToken("O");
+        assertThat( computerPlayer.AI, instanceOf(AI.class) );
     }
 }
