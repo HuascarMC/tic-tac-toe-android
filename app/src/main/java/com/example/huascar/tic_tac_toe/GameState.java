@@ -23,11 +23,14 @@ public class GameState {
 
     public boolean checkWin(Board board) {
         int[][] winCombinations = board.getWinCombinations();
+        String[] grid = board.getGrid();
 
         for( int i = 0; i < winCombinations.length; i++ ) {
             boolean combinationState = checkWinCombination(winCombinations[i], board);
 
-            if( combinationState == true ) {
+            if( combinationState ) {
+                // Get token inside winCombination and set to winner variable.
+                setWinnerToken( grid[winCombinations[i][0]] );
                 return true;
             }
         }
