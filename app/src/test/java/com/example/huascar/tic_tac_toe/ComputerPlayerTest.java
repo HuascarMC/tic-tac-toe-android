@@ -62,6 +62,7 @@ public class ComputerPlayerTest {
 
     @Test
     public void testInitializeAI() {
+        computerPlayer.initializeAI();
         assertThat( computerPlayer.AI, instanceOf(AI.class) );
     }
 }
