@@ -18,6 +18,6 @@ public abstract class Player {
 
     public abstract void autoToken(String token);
 
-    public abstract void play(Board board, int spot);
+    public abstract void play(Board board, int spot) throws CloneNotSupportedException;
 
 }
