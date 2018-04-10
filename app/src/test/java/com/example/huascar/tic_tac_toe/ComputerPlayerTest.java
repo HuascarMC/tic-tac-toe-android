@@ -37,7 +37,7 @@ public class ComputerPlayerTest {
     }
 
     @Test
-    public void testPlaySmart() {
+    public void testPlaySmart() throws CloneNotSupportedException {
         computerPlayer.play(board);
         String[] grid = board.getGrid();
         assertEquals( computerPlayer.getToken(), grid[4]);
@@ -71,5 +71,17 @@ public class ComputerPlayerTest {
     public void testInitializeAI() {
         computerPlayer.initializeAI();
         assertThat( computerPlayer.AI, instanceOf(AI.class) );
+    }
+
+    @Test
+    public void testDoesntInitializeWhenTokenIsNull() {
+        ComputerPlayer computerPlayer = new ComputerPlayer();
+        assertNull( computerPlayer.AI );
+    }
+
+    @Test
+    public void testInitializesAIWhenTokenIsSet() {
+
+
     }
 }
