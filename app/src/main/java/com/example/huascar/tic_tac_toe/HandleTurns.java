@@ -16,4 +16,8 @@ public class HandleTurns {
     public String getCurrentPlayerToken() {
         return currentPlayerToken;
     }
+
+    public void setCurrentPlayerToken(String token) {
+        this.currentPlayerToken = token;
+    }
 }
