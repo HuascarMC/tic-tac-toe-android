@@ -56,4 +56,8 @@ public class FirstPlayerSetUp extends AppCompatActivity {
             botButton.setTextColor(Color.parseColor("#FDA570"));
         }
     }
+
+    public void setPlayer(String player) {
+        this.player = player;
+    }
 }
