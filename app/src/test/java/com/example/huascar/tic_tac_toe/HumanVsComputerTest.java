@@ -38,4 +38,10 @@ public class HumanVsComputerTest {
         assertNotNull( humanPlayer );
     }
 
+    @Test
+    public void testHasGameState() {
+        GameState gameState = humanVsComputer.getGameState();
+        assertNotNull( gameState );
+    }
+
 }
