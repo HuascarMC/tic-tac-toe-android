@@ -44,6 +44,10 @@ public class FirstPlayerSetUp extends AppCompatActivity {
         this.player = player;
     }
 
+    public void setToken(String token) {
+        this.token = token;
+    }
+
     public void onClick(View buttonView) {
         Button button = (Button) buttonView;
         String buttonScan = button.getText().toString();

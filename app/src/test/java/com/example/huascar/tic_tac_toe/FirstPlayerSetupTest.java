@@ -35,6 +35,6 @@ public class FirstPlayerSetupTest {
     @Test
     public void testSetToken() {
         firstPlayerSetUp.setToken("O");
-        assertEquals( firstPlayerSetUp.setToken(), "O" );
+        assertEquals( firstPlayerSetUp.getToken(), "O" );
     }
 }
