@@ -49,6 +49,7 @@ public class FirstPlayerSetUp extends AppCompatActivity {
         String buttonScan = button.getText().toString();
         Log.d("buttonScan", buttonScan);
         handlePlayerButton(button);
+        handleTokenButton(button);
     }
 
     public void handlePlayerButton(Button button) {
@@ -60,6 +61,17 @@ public class FirstPlayerSetUp extends AppCompatActivity {
             botButton.setTextColor(Color.parseColor("#FDA570"));
         }
         setPlayer(button.getText().toString());
+    }
+
+    public void handleTokenButton(Button button) {
+        if( button.getText() == tokenOButton.getText() ) {
+            tokenXButton.setTextColor(Color.parseColor("#F3EEEB"));
+            tokenOButton.setTextColor(Color.parseColor("#FDA570"));
+        } else if ( button.getText() == tokenXButton.getText() ) {
+            tokenOButton.setTextColor(Color.parseColor("#F3EEEB"));
+            tokenXButton.setTextColor(Color.parseColor("#FDA570"));
+        }
+        setToken(button.getText().toString());
     }
 
 }

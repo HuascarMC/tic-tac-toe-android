@@ -29,6 +29,12 @@ public class FirstPlayerSetupTest {
     @Test
     public void testSetPlayer() {
         firstPlayerSetUp.setPlayer("Human");
-        assertEquals( firstPlayerSetUp.getPlayer(), "Human");
+        assertEquals( firstPlayerSetUp.getPlayer(), "Human" );
+    }
+
+    @Test
+    public void testSetToken() {
+        firstPlayerSetUp.setToken("O");
+        assertEquals( firstPlayerSetUp.setToken(), "O" );
     }
 }
