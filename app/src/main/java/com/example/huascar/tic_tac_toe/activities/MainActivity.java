@@ -1,7 +1,9 @@
-package com.example.huascar.tic_tac_toe;
+package com.example.huascar.tic_tac_toe.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.huascar.tic_tac_toe.R;
 
 public class MainActivity extends AppCompatActivity {
 
