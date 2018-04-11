@@ -2,6 +2,8 @@ package com.example.huascar.tic_tac_toe.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 
 import com.example.huascar.tic_tac_toe.R;
@@ -20,6 +22,9 @@ public class FirstPlayerSetUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_player_setup);
 
+        token = null;
+        player = null;
+
         humanButton = findViewById(R.id.human_button);
         botButton = findViewById(R.id.bot_button);
         tokenXButton = findViewById(R.id.x_button);
@@ -32,5 +37,11 @@ public class FirstPlayerSetUp extends AppCompatActivity {
 
     public String getPlayer() {
         return player;
+    }
+
+    public void onClick(View buttonView) {
+        Button button = (Button) buttonView;
+        String buttonScan = button.getText().toString();
+        Log.d("buttonScan", buttonScan);
     }
 }
