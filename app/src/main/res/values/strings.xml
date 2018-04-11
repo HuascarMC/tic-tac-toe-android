@@ -7,4 +7,5 @@
     <string name="token_X">X</string>
     <string name="token_o">O</string>
     <string name="next">></string>
+    <string name="second_player_prompt">Choose 2nd Player</string>
 </resources>
