@@ -51,7 +51,7 @@
         android:layout_marginTop="8dp"
         android:color="#EB8043"
         android:fontFamily="@font/annie_use_your_telescope"
-        android:onClick="onClick"
+        android:onClick="onContinueClick"
         android:state_checked="true"
         android:text="@string/next"
         android:textAlignment="center"

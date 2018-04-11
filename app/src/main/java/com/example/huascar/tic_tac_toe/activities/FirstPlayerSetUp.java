@@ -48,10 +48,13 @@ public class FirstPlayerSetUp extends AppCompatActivity {
         this.token = token;
     }
 
+    public void onContinueClick(View buttonView) {
+        Button button = (Button) buttonView;
+        button.setTextColor(Color.parseColor("#FDA570"));
+    }
+
     public void onOptionClick(View buttonView) {
         Button button = (Button) buttonView;
-        String buttonScan = button.getText().toString();
-        Log.d("buttonScan", buttonScan);
         handlePlayerButton(button);
         handleTokenButton(button);
     }
