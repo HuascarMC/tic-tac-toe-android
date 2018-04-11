@@ -26,4 +26,10 @@ public class HumanVsComputerTest {
         assertNotNull( board );
     }
 
+    @Test
+    public void testHasComputerPlayer() {
+        ComputerPlayer computerPlayer = humanVsComputer.getComputerPlayer();
+        assertNotNull( computerPlayer );
+    }
+
 }
