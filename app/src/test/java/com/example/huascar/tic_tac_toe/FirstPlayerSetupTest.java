@@ -3,6 +3,9 @@ package com.example.huascar.tic_tac_toe;
 import com.example.huascar.tic_tac_toe.activities.FirstPlayerSetUp;
 
 import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 public class FirstPlayerSetupTest {
 
@@ -13,5 +16,9 @@ public class FirstPlayerSetupTest {
         firstPlayerSetUp = new FirstPlayerSetUp();
     }
 
+    @Test
+    public void testPlayerIsNull() {
+        assertEquals( firstPlayerSetUp.getPlayer(), null );
+    }
 
 }
