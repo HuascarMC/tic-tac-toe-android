@@ -9,4 +9,5 @@
     <string name="next">></string>
     <string name="second_player_prompt">Choose 2nd Player</string>
     <string name="previous"><![CDATA[<]]></string>
+    <string name="play">PLAY</string>
 </resources>
