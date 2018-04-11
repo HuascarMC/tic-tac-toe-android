@@ -69,13 +69,13 @@ public class FirstPlayerSetUp extends AppCompatActivity {
     }
 
     public void handleTokenButton(Button button) {
-        if( button.getText() == tokenOButton.getText() ) {
-            tokenXButton.setTextColor(Color.parseColor("#F3EEEB"));
-            tokenOButton.setTextColor(Color.parseColor("#FDA570"));
-            setToken(button.getText().toString());
-        } else if ( button.getText() == tokenXButton.getText() ) {
+        if( button.getText() == tokenXButton.getText() ) {
             tokenOButton.setTextColor(Color.parseColor("#F3EEEB"));
             tokenXButton.setTextColor(Color.parseColor("#FDA570"));
+            setToken(button.getText().toString());
+        } else if ( button.getText() == tokenOButton.getText() ) {
+            tokenXButton.setTextColor(Color.parseColor("#F3EEEB"));
+            tokenOButton.setTextColor(Color.parseColor("#FDA570"));
             setToken(button.getText().toString());
         }
     }
