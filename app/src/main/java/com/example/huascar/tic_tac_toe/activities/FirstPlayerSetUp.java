@@ -1,5 +1,6 @@
 package com.example.huascar.tic_tac_toe.activities;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -51,6 +52,9 @@ public class FirstPlayerSetUp extends AppCompatActivity {
     public void onContinueClick(View buttonView) {
         Button button = (Button) buttonView;
         button.setTextColor(Color.parseColor("#FDA570"));
+
+        Intent intent = new Intent(this, SecondPlayerSetup.class);
+        startActivity(intent);
     }
 
     public void onOptionClick(View buttonView) {

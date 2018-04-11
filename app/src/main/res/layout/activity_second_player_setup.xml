@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#333333"
-    tools:context="com.example.huascar.tic_tac_toe.activities.FirstPlayerSetUp">
+    tools:context="com.example.huascar.tic_tac_toe.activities.SecondPlayerSetup">
 
     <TextView
         android:id="@+id/player-prompt2"
