@@ -28,7 +28,7 @@
         android:layout_width="236dp"
         android:layout_height="55dp"
         android:fontFamily="@font/annie_use_your_telescope"
-        android:text="@string/player_prompt"
+        android:text="@string/first_player_prompt"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
         android:textSize="36sp"
@@ -36,7 +36,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.117" />
+        app:layout_constraintVertical_bias="0.121" />
 
     <Button
         android:id="@+id/previous-button"
