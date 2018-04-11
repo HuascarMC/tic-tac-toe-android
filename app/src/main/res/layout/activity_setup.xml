@@ -9,10 +9,9 @@
 
     <TextView
         android:id="@+id/player-prompt"
-        android:layout_width="238dp"
-        android:layout_height="71dp"
-        android:fontFamily="cursive"
-        android:lineSpacingExtra="8sp"
+        android:layout_width="236dp"
+        android:layout_height="55dp"
+        android:fontFamily="@font/annie_use_your_telescope"
         android:text="@string/player_prompt"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
@@ -26,22 +25,38 @@
 
     <Button
         android:id="@+id/human-button"
+        style="@android:style/Widget.Holo.Light.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="52dp"
+        android:fontFamily="@font/annie_use_your_telescope"
         android:text="@string/human"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/player-prompt" />
+        app:layout_constraintTop_toBottomOf="@+id/player-prompt"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button2"
+        style="@android:style/Widget.Holo.Light.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="80dp"
         android:layout_marginTop="52dp"
+        android:fontFamily="@font/annie_use_your_telescope"
         android:text="@string/Bot"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/player-prompt" />
+        app:layout_constraintTop_toBottomOf="@+id/player-prompt"
+        app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>
