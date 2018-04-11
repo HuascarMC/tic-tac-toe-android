@@ -36,4 +36,8 @@ public class SecondPlayerSetup extends AppCompatActivity {
     public String getToken() {
         return token;
     }
+
+    public void setPlayer(String player) {
+        this.player = player;
+    }
 }
