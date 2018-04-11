@@ -30,4 +30,8 @@ public class HumanVsComputer {
     public ComputerPlayer getComputerPlayer() {
         return computerPlayer;
     }
+
+    public HumanPlayer getHumanPlayer() {
+        return humanPlayer;
+    }
 }
