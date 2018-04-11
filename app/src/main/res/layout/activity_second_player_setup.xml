@@ -39,17 +39,17 @@
         app:layout_constraintVertical_bias="0.117" />
 
     <Button
-        android:id="@+id/next-button"
+        android:id="@+id/previous-button"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
-        android:layout_marginLeft="104dp"
-        android:layout_marginStart="104dp"
+        android:layout_marginLeft="108dp"
+        android:layout_marginStart="108dp"
         android:layout_marginTop="8dp"
         android:color="#EB8043"
         android:fontFamily="@font/annie_use_your_telescope"
-        android:onClick="onContinueClick"
+        android:onClick="onPreviousClick"
         android:state_checked="true"
         android:text="@string/previous"
         android:textAlignment="center"
@@ -73,7 +73,6 @@
         android:layout_marginTop="8dp"
         android:color="#EB8043"
         android:fontFamily="@font/annie_use_your_telescope"
-        android:onClick="onContinueClick"
         android:state_checked="true"
         android:text="@string/next"
         android:textAlignment="center"
@@ -81,8 +80,8 @@
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/next-button"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toEndOf="@+id/previous-button"
         app:layout_constraintTop_toBottomOf="@+id/player-prompt2"
         app:layout_constraintVertical_bias="1.0" />
 
