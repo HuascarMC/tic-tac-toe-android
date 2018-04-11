@@ -8,6 +8,22 @@
     tools:context="com.example.huascar.tic_tac_toe.activities.SetUp">
 
     <TextView
+        android:id="@+id/player-prompt2"
+        android:layout_width="236dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/annie_use_your_telescope"
+        android:text="@string/token_prompt"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player-prompt"
+        app:layout_constraintVertical_bias="0.406" />
+
+    <TextView
         android:id="@+id/player-prompt"
         android:layout_width="236dp"
         android:layout_height="55dp"
@@ -16,20 +32,37 @@
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
         android:textSize="36sp"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.213" />
+        app:layout_constraintVertical_bias="0.117" />
 
     <Button
-        android:id="@+id/human-button"
+        android:id="@+id/x-button"
+        style="@android:style/Widget.Holo.Light.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="108dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/annie_use_your_telescope"
+        android:text="@string/token_X"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player-prompt2"
+        app:layout_constraintVertical_bias="0.776" />
+
+    <Button
+        android:id="@+id/human-button2"
         style="@android:style/Widget.Holo.Light.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="72dp"
         android:layout_marginTop="52dp"
         android:fontFamily="@font/annie_use_your_telescope"
         android:text="@string/human"
@@ -42,12 +75,30 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/o-button"
+        style="@android:style/Widget.Holo.Light.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/annie_use_your_telescope"
+        android:text="@string/token_o"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player-prompt2"
+        app:layout_constraintVertical_bias="0.693" />
+
+    <Button
+        android:id="@+id/bot-button"
         style="@android:style/Widget.Holo.Light.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="80dp"
+        android:layout_marginEnd="72dp"
         android:layout_marginTop="52dp"
         android:fontFamily="@font/annie_use_your_telescope"
         android:text="@string/Bot"

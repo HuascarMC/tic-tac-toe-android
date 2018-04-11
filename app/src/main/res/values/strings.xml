@@ -3,4 +3,7 @@
     <string name="player_prompt">Choose Player</string>
     <string name="human">Human</string>
     <string name="Bot">Bot</string>
+    <string name="token_prompt">Choose Token</string>
+    <string name="token_X">X</string>
+    <string name="token_o">O</string>
 </resources>
