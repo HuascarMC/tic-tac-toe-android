@@ -21,4 +21,9 @@ public class FirstPlayerSetupTest {
         assertEquals( firstPlayerSetUp.getPlayer(), null );
     }
 
+    @Test
+    public void testTokenIsNull() {
+        assertEquals( firstPlayerSetUp.getToken(), null );
+    }
+
 }
