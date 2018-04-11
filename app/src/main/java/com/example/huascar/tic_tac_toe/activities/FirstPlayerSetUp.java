@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.example.huascar.tic_tac_toe.R;
 
-public class SetUp extends AppCompatActivity {
+public class FirstPlayerSetUp extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
