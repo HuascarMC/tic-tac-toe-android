@@ -8,7 +8,7 @@ import com.example.huascar.tic_tac_toe.R;
 public class FirstPlayerSetUp extends AppCompatActivity {
 
     private String token;
-
+    private String player;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,5 +17,9 @@ public class FirstPlayerSetUp extends AppCompatActivity {
 
     public String getToken() {
         return token;
+    }
+
+    public String getPlayer() {
+        return player;
     }
 }
