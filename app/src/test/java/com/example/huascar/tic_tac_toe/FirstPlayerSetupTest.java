@@ -1,5 +1,8 @@
 package com.example.huascar.tic_tac_toe;
 
+import android.content.Intent;
+import android.widget.Button;
+
 import com.example.huascar.tic_tac_toe.activities.FirstPlayerSetUp;
 
 import org.junit.Before;
@@ -37,4 +40,5 @@ public class FirstPlayerSetupTest {
         firstPlayerSetUp.setToken("O");
         assertEquals( firstPlayerSetUp.getToken(), "O" );
     }
+
 }

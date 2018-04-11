@@ -13,7 +13,7 @@ public class FirstPlayerSetUp extends AppCompatActivity {
 
     private String token;
     private String player;
-    private Button humanButton;
+    public Button humanButton;
     private Button botButton;
     private Button tokenXButton;
     private Button tokenOButton;
@@ -60,22 +60,24 @@ public class FirstPlayerSetUp extends AppCompatActivity {
         if( button.getText() == humanButton.getText() ) {
             botButton.setTextColor(Color.parseColor("#F3EEEB"));
             humanButton.setTextColor(Color.parseColor("#FDA570"));
+            setPlayer(button.getText().toString());
         } else if ( button.getText() == botButton.getText() ) {
             humanButton.setTextColor(Color.parseColor("#F3EEEB"));
             botButton.setTextColor(Color.parseColor("#FDA570"));
+            setPlayer(button.getText().toString());
         }
-        setPlayer(button.getText().toString());
     }
 
     public void handleTokenButton(Button button) {
         if( button.getText() == tokenOButton.getText() ) {
             tokenXButton.setTextColor(Color.parseColor("#F3EEEB"));
             tokenOButton.setTextColor(Color.parseColor("#FDA570"));
+            setToken(button.getText().toString());
         } else if ( button.getText() == tokenXButton.getText() ) {
             tokenOButton.setTextColor(Color.parseColor("#F3EEEB"));
             tokenXButton.setTextColor(Color.parseColor("#FDA570"));
+            setToken(button.getText().toString());
         }
-        setToken(button.getText().toString());
     }
 
 }
