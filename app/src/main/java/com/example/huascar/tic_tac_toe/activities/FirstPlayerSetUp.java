@@ -1,5 +1,6 @@
 package com.example.huascar.tic_tac_toe.activities;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -43,5 +44,16 @@ public class FirstPlayerSetUp extends AppCompatActivity {
         Button button = (Button) buttonView;
         String buttonScan = button.getText().toString();
         Log.d("buttonScan", buttonScan);
+        handlePlayerButton(button);
+    }
+
+    public void handlePlayerButton(Button button) {
+        if( button.getText() == humanButton.getText() ) {
+            botButton.setTextColor(Color.parseColor("#F3EEEB"));
+            humanButton.setTextColor(Color.parseColor("#FDA570"));
+        } else if ( button.getText() == botButton.getText() ) {
+            humanButton.setTextColor(Color.parseColor("#F3EEEB"));
+            botButton.setTextColor(Color.parseColor("#FDA570"));
+        }
     }
 }
