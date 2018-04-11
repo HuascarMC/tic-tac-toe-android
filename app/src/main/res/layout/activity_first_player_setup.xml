@@ -40,7 +40,7 @@
 
     <Button
         android:id="@+id/x-button"
-        style="@android:style/Widget.Holo.Light.Button.Borderless"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="108dp"
@@ -59,7 +59,7 @@
 
     <Button
         android:id="@+id/human-button2"
-        style="@android:style/Widget.Holo.Light.Button.Borderless"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -78,7 +78,7 @@
 
     <Button
         android:id="@+id/o-button"
-        style="@android:style/Widget.Holo.Light.Button.Borderless"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
@@ -97,7 +97,7 @@
 
     <Button
         android:id="@+id/bot-button"
-        style="@android:style/Widget.Holo.Light.Button.Borderless"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
