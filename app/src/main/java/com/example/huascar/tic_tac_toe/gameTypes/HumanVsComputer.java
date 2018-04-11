@@ -34,4 +34,8 @@ public class HumanVsComputer {
     public HumanPlayer getHumanPlayer() {
         return humanPlayer;
     }
+
+    public GameState getGameState() {
+        return gameState;
+    }
 }
