@@ -40,6 +40,10 @@ public class FirstPlayerSetUp extends AppCompatActivity {
         return player;
     }
 
+    public void setPlayer(String player) {
+        this.player = player;
+    }
+
     public void onClick(View buttonView) {
         Button button = (Button) buttonView;
         String buttonScan = button.getText().toString();
@@ -55,9 +59,7 @@ public class FirstPlayerSetUp extends AppCompatActivity {
             humanButton.setTextColor(Color.parseColor("#F3EEEB"));
             botButton.setTextColor(Color.parseColor("#FDA570"));
         }
+        setPlayer(button.getText().toString());
     }
 
-    public void setPlayer(String player) {
-        this.player = player;
-    }
 }
