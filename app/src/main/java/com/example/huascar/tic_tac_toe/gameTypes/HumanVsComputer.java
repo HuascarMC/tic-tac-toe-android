@@ -22,4 +22,8 @@ public class HumanVsComputer {
         computerPlayer = new ComputerPlayer();
         humanPlayer = new HumanPlayer();
     }
+
+    public Board getBoard() {
+        return board;
+    }
 }
