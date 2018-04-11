@@ -32,4 +32,10 @@ public class HumanVsComputerTest {
         assertNotNull( computerPlayer );
     }
 
+    @Test
+    public void testHasHumanPlayer() {
+        HumanPlayer humanPlayer = humanVsComputer.getHumanPlayer();
+        assertNotNull( humanPlayer );
+    }
+
 }
