@@ -54,6 +54,14 @@ public class SecondPlayerSetup extends AppCompatActivity {
 
     }
 
+    public void onPreviousClick(View buttonView) {
+        Button button = (Button) buttonView;
+        button.setTextColor(Color.parseColor("#FDA570"));
+
+        Intent intent = new Intent( SecondPlayerSetup.this, FirstPlayerSetUp.class );
+        startActivity(intent);
+    }
+
     public void onOptionClick(View buttonView) {
         Button button = (Button) buttonView;
         handlePlayerButton(button);
