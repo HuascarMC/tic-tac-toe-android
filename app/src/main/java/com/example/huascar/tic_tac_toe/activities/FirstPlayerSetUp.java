@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.huascar.tic_tac_toe.R;
 
@@ -53,11 +54,10 @@ public class FirstPlayerSetUp extends AppCompatActivity {
         Button button = (Button) buttonView;
         button.setTextColor(Color.parseColor("#FDA570"));
 
-        Intent intent = new Intent(FirstPlayerSetUp.this, SecondPlayerSetup.class);
-        intent.putExtra("firstPlayer", firstPlayer);
-        intent.putExtra("firstToken", firstToken);
-
         if( firstPlayer != null && firstToken != null ) {
+            Intent intent = new Intent(FirstPlayerSetUp.this, SecondPlayerSetup.class);
+            intent.putExtra("firstPlayer", firstPlayer);
+            intent.putExtra("firstToken", firstToken);
             startActivity(intent);
         }
         button.setTextColor(Color.parseColor("#F3EEEB"));

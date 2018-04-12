@@ -9,10 +9,14 @@ import android.widget.Button;
 
 import com.example.huascar.tic_tac_toe.R;
 
+import java.util.Arrays;
+
 public class SecondPlayerSetup extends AppCompatActivity {
 
     private String secondToken;
     private String secondPlayer;
+    private String firstPlayer;
+    private String firstToken;
     public Button humanButton;
     private Button botButton;
     private Button tokenXButton;
@@ -26,8 +30,8 @@ public class SecondPlayerSetup extends AppCompatActivity {
         Intent intent = getIntent();
 
         Bundle extra = intent.getExtras();
-        String firstPlayer = extra.getString("firstPlayer");
-        String firstToken = extra.getString("firstToken");
+        firstPlayer = extra.getString("firstPlayer");
+        firstToken = extra.getString("firstToken");
 
         secondToken = null;
         secondPlayer = null;
@@ -57,6 +61,21 @@ public class SecondPlayerSetup extends AppCompatActivity {
     public void onContinueClick(View buttonView) {
         Button button = (Button) buttonView;
         button.setTextColor(Color.parseColor("#FDA570"));
+
+        if( secondPlayer != null && secondToken != null ) {
+
+        }
+        button.setTextColor(Color.parseColor("#F3EEEB"));
+
+    }
+
+    public void handleOnContinueClick() {
+        String[] players = new String[]{firstPlayer, secondPlayer};
+        String[] tokens = new String[]{firstToken, secondToken};
+
+        if(Arrays.asList(players).contains("Human") && Arrays.asList(players).contains("Bot")) {
+
+        }
 
     }
 
