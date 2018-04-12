@@ -54,6 +54,8 @@ public class FirstPlayerSetUp extends AppCompatActivity {
         button.setTextColor(Color.parseColor("#FDA570"));
 
         Intent intent = new Intent(FirstPlayerSetUp.this, SecondPlayerSetup.class);
+        intent.putExtra("playerOne", player);
+        intent.putExtra("playerOneToken", token);
         startActivity(intent);
     }
 
