@@ -61,7 +61,7 @@ public class SecondPlayerSetup extends AppCompatActivity {
         this.secondToken = token;
     }
 
-    public void onContinueClick(View buttonView) {
+    public void onPlayClick(View buttonView) {
         Button button = (Button) buttonView;
         button.setTextColor(Color.parseColor("#FDA570"));
 

@@ -71,6 +71,7 @@
         android:layout_marginTop="8dp"
         android:color="#EB8043"
         android:fontFamily="@font/annie_use_your_telescope"
+        android:onClick="onPlayClick"
         android:state_checked="true"
         android:text="@string/play"
         android:textAlignment="center"
