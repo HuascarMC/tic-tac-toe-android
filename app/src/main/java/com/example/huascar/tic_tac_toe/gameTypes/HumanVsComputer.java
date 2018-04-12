@@ -21,6 +21,8 @@ public class HumanVsComputer {
         gameState = new GameState();
         computerPlayer = new ComputerPlayer();
         humanPlayer = new HumanPlayer();
+
+
     }
 
     public Board getBoard() {

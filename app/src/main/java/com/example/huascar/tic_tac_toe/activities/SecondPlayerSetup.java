@@ -74,25 +74,25 @@ public class SecondPlayerSetup extends AppCompatActivity {
 
     public void handleOnContinueClick() {
         List<String> players = Arrays.asList(firstPlayer, secondPlayer);
-        Intent intent;
+        Intent intent = new Intent();
 
-        if(players.contains("Human") && players.contains("Bot")) {
+        if( players.contains("Human") && players.contains("Bot") ) {
             intent = new Intent(SecondPlayerSetup.this, HumanVsComputer.class);
-
-        } else if (players.contains("Human") && players.contains("Human")) {
-            intent = new Intent(SecondPlayerSetup.this, HumanVsHuman.class);
-
-        } else if (players.contains("Bot") && players.contains("Bot")) {
-            intent = new Intent(SecondPlayerSetup.this, BotVsBot.class);
         }
-        if( intent != null) {
-            intent.putExtra("firstPlayer", firstPlayer);
-            intent.putExtra("firstToken", firstToken);
-            intent.putExtra("secondPlayer", secondPlayer);
-            intent.putExtra("secondToken", secondToken);
-
-            startActivity(intent);
-        }
+//        } else if (players.contains("Human") && players.contains("Human")) {
+//            intent = new Intent(SecondPlayerSetup.this, HumanVsHuman.class);
+//
+//        } else if (players.contains("Bot") && players.contains("Bot")) {
+//            intent = new Intent(SecondPlayerSetup.this, BotVsBot.class);
+//        }
+//        if( intent != null) {
+//            intent.putExtra("firstPlayer", firstPlayer);
+//            intent.putExtra("firstToken", firstToken);
+//            intent.putExtra("secondPlayer", secondPlayer);
+//            intent.putExtra("secondToken", secondToken);
+//
+//            startActivity(intent);
+//        }
     }
 
     public void onPreviousClick(View buttonView) {
