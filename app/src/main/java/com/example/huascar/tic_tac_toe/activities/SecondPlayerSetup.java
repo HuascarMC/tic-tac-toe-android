@@ -66,31 +66,36 @@ public class SecondPlayerSetup extends AppCompatActivity {
         button.setTextColor(Color.parseColor("#FDA570"));
 
         if( secondPlayer != null && secondToken != null ) {
-            handleOnContinueClick();
+            Intent intent = new Intent(SecondPlayerSetup.this, Play.class);
+            intent.putExtra("firstPlayer", firstPlayer);
+            intent.putExtra("firstToken", firstToken);
+            intent.putExtra("secondPlayer", secondPlayer);
+            intent.putExtra("secondToken", secondToken);
+            startActivity(intent);
         }
         button.setTextColor(Color.parseColor("#F3EEEB"));
 
     }
 
-    public void handleOnContinueClick() {
-        List<String> players = Arrays.asList(firstPlayer, secondPlayer);
-        Intent intent = null;
-
-        if( players.contains("Human") && players.contains("Bot") ) {
-            intent = new Intent(SecondPlayerSetup.this, HumanVsComputer.class);
-        } else if (players.contains("Human") && players.contains("Human")) {
-            intent = new Intent(SecondPlayerSetup.this, HumanVsComputer.class);
-
-        } else if (players.contains("Bot") && players.contains("Bot")) {
-            intent = new Intent(SecondPlayerSetup.this, HumanVsComputer.class);
-        }
-            intent.putExtra("firstPlayer", firstPlayer);
-            intent.putExtra("firstToken", firstToken);
-            intent.putExtra("secondPlayer", secondPlayer);
-            intent.putExtra("secondToken", secondToken);
-
-            startActivity(intent);
-    }
+//    public void handleOnContinueClick() {
+//        List<String> players = Arrays.asList(firstPlayer, secondPlayer);
+//        Intent intent = null;
+//
+//        if( players.contains("Human") && players.contains("Bot") ) {
+//            intent = new Intent(SecondPlayerSetup.this, Play.class);
+//        } else if (players.contains("Human") && players.contains("Human")) {
+//            intent = new Intent(SecondPlayerSetup.this, Play.class);
+//
+//        } else if (players.contains("Bot") && players.contains("Bot")) {
+//            intent = new Intent(SecondPlayerSetup.this, Play.class);
+//        }
+//            intent.putExtra("firstPlayer", firstPlayer);
+//            intent.putExtra("firstToken", firstToken);
+//            intent.putExtra("secondPlayer", secondPlayer);
+//            intent.putExtra("secondToken", secondToken);
+//
+//            startActivity(intent);
+//    }
 
     public void onPreviousClick(View buttonView) {
         Button button = (Button) buttonView;
