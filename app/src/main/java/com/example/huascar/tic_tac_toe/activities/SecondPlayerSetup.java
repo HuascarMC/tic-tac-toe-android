@@ -25,9 +25,9 @@ public class SecondPlayerSetup extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-//        Bundle extra = intent.getExtras();
-//        String firstPlayer = extra.getString("firstPlayer");
-//        String firstToken = extra.getString("firstToken");
+        Bundle extra = intent.getExtras();
+        String firstPlayer = extra.getString("firstPlayer");
+        String firstToken = extra.getString("firstToken");
 
         secondToken = null;
         secondPlayer = null;
