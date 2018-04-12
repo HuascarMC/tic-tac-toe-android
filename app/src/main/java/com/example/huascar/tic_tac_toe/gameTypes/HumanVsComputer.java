@@ -7,6 +7,7 @@ import com.example.huascar.tic_tac_toe.Board;
 import com.example.huascar.tic_tac_toe.ComputerPlayer;
 import com.example.huascar.tic_tac_toe.GameState;
 import com.example.huascar.tic_tac_toe.HumanPlayer;
+import com.example.huascar.tic_tac_toe.R;
 
 /**
  * Created by huascar on 11/04/2018.
