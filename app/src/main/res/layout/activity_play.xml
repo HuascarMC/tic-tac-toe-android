@@ -7,4 +7,35 @@
     android:background="#333333"
     tools:context="com.example.huascar.tic_tac_toe.activities.SecondPlayerSetup">
 
+    <View
+        android:layout_width="332dp"
+        android:layout_height="9dp"
+        android:background="@android:color/background_light"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="279dp" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="336dp"
+        android:layout_height="8dp"
+        android:background="@android:color/background_light"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="418dp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="12dp"
+        android:layout_height="378dp"
+        android:background="@android:color/background_light"
+        tools:layout_editor_absoluteX="256dp"
+        tools:layout_editor_absoluteY="163dp" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="11dp"
+        android:layout_height="378dp"
+        android:background="@android:color/background_light"
+        tools:layout_editor_absoluteX="119dp"
+        tools:layout_editor_absoluteY="163dp" />
+
 </android.support.constraint.ConstraintLayout>
