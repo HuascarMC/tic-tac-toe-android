@@ -74,7 +74,7 @@ public class SecondPlayerSetup extends AppCompatActivity {
 
     public void handleOnContinueClick() {
         List<String> players = Arrays.asList(firstPlayer, secondPlayer);
-        Intent intent;
+        Intent intent = null;
 
         if( players.contains("Human") && players.contains("Bot") ) {
             intent = new Intent(SecondPlayerSetup.this, HumanVsComputer.class);
