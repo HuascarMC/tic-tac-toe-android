@@ -1,5 +1,8 @@
 package com.example.huascar.tic_tac_toe.gameTypes;
 
+import android.content.Intent;
+import android.os.Bundle;
+
 import com.example.huascar.tic_tac_toe.Board;
 import com.example.huascar.tic_tac_toe.ComputerPlayer;
 import com.example.huascar.tic_tac_toe.GameState;
@@ -17,11 +20,11 @@ public class HumanVsComputer {
     private ComputerPlayer computerPlayer;
 
     public HumanVsComputer() {
+
         board = new Board();
         gameState = new GameState();
         computerPlayer = new ComputerPlayer();
         humanPlayer = new HumanPlayer();
-
 
     }
 
