@@ -17,7 +17,7 @@ public class SecondPlayerSetupTest {
     }
 
     @Test
-    public void testPlayerIsNull() {
+    public void testSecondPlayerIsNull() {
         assertEquals( secondPlayerSetup.getPlayer(), null );
     }
 
@@ -27,13 +27,13 @@ public class SecondPlayerSetupTest {
     }
 
     @Test
-    public void testSetPlayer() {
+    public void testSetSecondPlayer() {
         secondPlayerSetup.setPlayer("Human");
         assertEquals( secondPlayerSetup.getPlayer(), "Human" );
     }
 
     @Test
-    public void testSetToken() {
+    public void testSetSecondToken() {
         secondPlayerSetup.setToken("O");
         assertEquals( secondPlayerSetup.getToken(), "O" );
     }

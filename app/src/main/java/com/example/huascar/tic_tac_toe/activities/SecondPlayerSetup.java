@@ -12,7 +12,7 @@ import com.example.huascar.tic_tac_toe.R;
 public class SecondPlayerSetup extends AppCompatActivity {
 
     private String token;
-    private String player;
+    private String secondPlayer;
     public Button humanButton;
     private Button botButton;
     private Button tokenXButton;
@@ -23,8 +23,13 @@ public class SecondPlayerSetup extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second_player_setup);
 
+        Intent intent = getIntent();
+
+        Bundle extra = intent.getExtras();
+        int playerOne = extra.getInt("taskId");
+
         token = null;
-        player = null;
+        secondPlayer = null;
 
         humanButton = findViewById(R.id.human_button);
         botButton = findViewById(R.id.bot_button);
@@ -33,7 +38,7 @@ public class SecondPlayerSetup extends AppCompatActivity {
     }
 
     public String getPlayer() {
-        return player;
+        return secondPlayer;
     }
 
     public String getToken() {
@@ -41,7 +46,7 @@ public class SecondPlayerSetup extends AppCompatActivity {
     }
 
     public void setPlayer(String player) {
-        this.player = player;
+        this.secondPlayer = player;
     }
 
     public void setToken(String token) {
