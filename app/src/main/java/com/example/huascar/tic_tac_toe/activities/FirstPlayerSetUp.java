@@ -59,8 +59,8 @@ public class FirstPlayerSetUp extends AppCompatActivity {
 
         if( firstPlayer != null && firstToken != null ) {
             startActivity(intent);
-            button.setTextColor(Color.parseColor("#F3EEEB"));
         }
+        button.setTextColor(Color.parseColor("#F3EEEB"));
     }
 
     public void onOptionClick(View buttonView) {
