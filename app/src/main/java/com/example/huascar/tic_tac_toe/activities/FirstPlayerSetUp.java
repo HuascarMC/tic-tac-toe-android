@@ -12,8 +12,8 @@ import com.example.huascar.tic_tac_toe.R;
 
 public class FirstPlayerSetUp extends AppCompatActivity {
 
-    private String token;
-    private String player;
+    private String firstToken;
+    private String firstPlayer;
     public Button humanButton;
     private Button botButton;
     private Button tokenXButton;
@@ -24,8 +24,8 @@ public class FirstPlayerSetUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_player_setup);
 
-        token = null;
-        player = null;
+        firstToken = null;
+        firstPlayer = null;
 
         humanButton = findViewById(R.id.human_button);
         botButton = findViewById(R.id.bot_button);
@@ -34,19 +34,19 @@ public class FirstPlayerSetUp extends AppCompatActivity {
     }
 
     public String getToken() {
-        return token;
+        return firstToken;
     }
 
     public String getPlayer() {
-        return player;
+        return firstPlayer;
     }
 
     public void setPlayer(String player) {
-        this.player = player;
+        this.firstPlayer = player;
     }
 
     public void setToken(String token) {
-        this.token = token;
+        this.firstToken = token;
     }
 
     public void onContinueClick(View buttonView) {
@@ -54,9 +54,13 @@ public class FirstPlayerSetUp extends AppCompatActivity {
         button.setTextColor(Color.parseColor("#FDA570"));
 
         Intent intent = new Intent(FirstPlayerSetUp.this, SecondPlayerSetup.class);
-        intent.putExtra("firstPlayer", player);
-        intent.putExtra("firstToken", token);
-        startActivity(intent);
+        intent.putExtra("firstPlayer", firstPlayer);
+        intent.putExtra("firstToken", firstToken);
+
+        if( firstPlayer != null && firstToken != null ) {
+            startActivity(intent);
+            button.setTextColor(Color.parseColor("#F3EEEB"));
+        }
     }
 
     public void onOptionClick(View buttonView) {
