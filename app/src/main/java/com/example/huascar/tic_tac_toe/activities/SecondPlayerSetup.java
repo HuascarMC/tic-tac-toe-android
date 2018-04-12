@@ -8,8 +8,11 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.huascar.tic_tac_toe.R;
+import com.example.huascar.tic_tac_toe.gameTypes.HumanVsComputer;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class SecondPlayerSetup extends AppCompatActivity {
 
@@ -63,20 +66,33 @@ public class SecondPlayerSetup extends AppCompatActivity {
         button.setTextColor(Color.parseColor("#FDA570"));
 
         if( secondPlayer != null && secondToken != null ) {
-
+            handleOnContinueClick();
         }
         button.setTextColor(Color.parseColor("#F3EEEB"));
 
     }
 
     public void handleOnContinueClick() {
-        String[] players = new String[]{firstPlayer, secondPlayer};
-        String[] tokens = new String[]{firstToken, secondToken};
+        List<String> players = Arrays.asList(firstPlayer, secondPlayer);
+        Intent intent;
 
-        if(Arrays.asList(players).contains("Human") && Arrays.asList(players).contains("Bot")) {
+        if(players.contains("Human") && players.contains("Bot")) {
+            intent = new Intent(SecondPlayerSetup.this, HumanVsComputer.class);
 
+        } else if (players.contains("Human") && players.contains("Human")) {
+            intent = new Intent(SecondPlayerSetup.this, HumanVsHuman.class);
+
+        } else if (players.contains("Bot") && players.contains("Bot")) {
+            intent = new Intent(SecondPlayerSetup.this, BotVsBot.class);
         }
+        if( intent != null) {
+            intent.putExtra("firstPlayer", firstPlayer);
+            intent.putExtra("firstToken", firstToken);
+            intent.putExtra("secondPlayer", secondPlayer);
+            intent.putExtra("secondToken", secondToken);
 
+            startActivity(intent);
+        }
     }
 
     public void onPreviousClick(View buttonView) {
