@@ -7,107 +7,238 @@
     android:background="#333333"
     tools:context="com.example.huascar.tic_tac_toe.activities.SecondPlayerSetup">
 
-    <View
-        android:layout_width="332dp"
-        android:layout_height="9dp"
-        android:background="@android:color/background_light"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="279dp" />
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="382dp"
+        android:layout_height="392dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#333333"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.827"
+        tools:context="com.example.huascar.tic_tac_toe.activities.SecondPlayerSetup">
 
-    <View
-        android:id="@+id/view2"
-        android:layout_width="336dp"
-        android:layout_height="8dp"
-        android:background="@android:color/background_light"
-        tools:layout_editor_absoluteX="24dp"
-        tools:layout_editor_absoluteY="418dp" />
+        <View
+            android:id="@+id/view6"
+            android:layout_width="340dp"
+            android:layout_height="14dp"
+            android:layout_marginBottom="104dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/background_light"
+            app:layout_constraintBottom_toBottomOf="@+id/grid_7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.307"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/grid_1"
+            app:layout_constraintVertical_bias="0.989" />
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="12dp"
-        android:layout_height="378dp"
-        android:background="@android:color/background_light"
-        tools:layout_editor_absoluteX="256dp"
-        tools:layout_editor_absoluteY="163dp" />
+        <View
+            android:id="@+id/view5"
+            android:layout_width="340dp"
+            android:layout_height="13dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/background_light"
+            app:layout_constraintBottom_toTopOf="@+id/view6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.181"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/grid_2"
+            app:layout_constraintVertical_bias="0.449" />
 
-    <View
-        android:id="@+id/view3"
-        android:layout_width="11dp"
-        android:layout_height="378dp"
-        android:background="@android:color/background_light"
-        tools:layout_editor_absoluteX="119dp"
-        tools:layout_editor_absoluteY="163dp" />
+        <View
+            android:id="@+id/view"
+            android:layout_width="11dp"
+            android:layout_height="378dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:background="@android:color/background_light"
+            app:layout_constraintEnd_toStartOf="@+id/grid_8"
+            app:layout_constraintHorizontal_bias="0.884"
+            app:layout_constraintStart_toStartOf="@+id/grid_1"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/grid_1"
-        android:layout_width="78dp"
-        android:layout_height="80dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="177dp" />
+        <View
+            android:id="@+id/view3"
+            android:layout_width="10dp"
+            android:layout_height="375dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/background_light"
+            app:layout_constraintEnd_toStartOf="@+id/grid_1"
+            app:layout_constraintStart_toEndOf="@+id/grid_6"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/grid_2"
-        android:layout_width="78dp"
-        android:layout_height="80dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="280dp"
-        tools:layout_editor_absoluteY="177dp" />
+        <TextView
+            android:id="@+id/grid_1"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="56dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="156dp"
+            app:layout_constraintBottom_toTopOf="@+id/grid_7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.013"
+            app:layout_constraintStart_toEndOf="@+id/grid_6"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/grid_3"
-        android:layout_width="78dp"
-        android:layout_height="80dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="309dp" />
+        <TextView
+            android:id="@+id/grid_2"
+            android:layout_width="78dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="52dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="52dp"
+            app:layout_constraintBottom_toTopOf="@+id/grid_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.04"
+            app:layout_constraintStart_toEndOf="@+id/grid_3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.43" />
 
-    <TextView
-        android:id="@+id/grid_4"
-        android:layout_width="78dp"
-        android:layout_height="80dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="309dp" />
+        <TextView
+            android:id="@+id/grid_3"
+            android:layout_width="78dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/grid_6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.027"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.35" />
 
-    <TextView
-        android:id="@+id/grid_8"
-        android:layout_width="78dp"
-        android:layout_height="80dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="280dp"
-        tools:layout_editor_absoluteY="447dp" />
+        <TextView
+            android:id="@+id/grid_8"
+            android:layout_width="78dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="52dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintStart_toEndOf="@+id/grid_1"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/grid_7"
-        android:layout_width="78dp"
-        android:layout_height="80dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="447dp" />
+        <TextView
+            android:id="@+id/grid_7"
+            android:layout_width="78dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="52dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="52dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="284dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/grid_"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.05" />
 
-    <TextView
-        android:id="@+id/grid_6"
-        android:layout_width="78dp"
-        android:layout_height="80dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="447dp" />
+        <TextView
+            android:id="@+id/grid_"
+            android:layout_width="78dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="52dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/grid_8"
+            app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/grid_5"
-        android:layout_width="78dp"
-        android:layout_height="80dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="280dp"
-        tools:layout_editor_absoluteY="309dp" />
+        <TextView
+            android:id="@+id/grid_4"
+            android:layout_width="78dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="52dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="52dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="284dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/grid_7"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.05" />
 
-    <TextView
-        android:id="@+id/grid_0"
-        android:layout_width="78dp"
-        android:layout_height="80dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="177dp" />
+        <TextView
+            android:id="@+id/grid_6"
+            android:layout_width="78dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="288dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="288dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/grid_5"
+            android:layout_width="78dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="44dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="52dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/grid_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/grid_2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.952" />
+
+    </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>
