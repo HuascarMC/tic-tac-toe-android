@@ -51,7 +51,7 @@ public class HumanVsComputer {
     }
 
     public void setUp( String firstPlayer, String secondPlayer, String firstToken, String secondToken ) {
-
+        handleTurns.setCurrentPlayerToken(firstToken);
         if( firstPlayer == "Human" ) {
             humanPlayer.setToken(firstToken);
             computerPlayer.setToken(secondToken);
