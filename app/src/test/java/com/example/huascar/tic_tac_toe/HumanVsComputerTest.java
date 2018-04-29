@@ -17,7 +17,7 @@ public class HumanVsComputerTest {
 
     @Before
     public void before() {
-        humanVsComputer = new HumanVsComputer();
+        humanVsComputer = new HumanVsComputer("Human","X", "O" );
     }
 
     @Test

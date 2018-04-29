@@ -22,7 +22,7 @@ public class HumanVsComputer {
     private ComputerPlayer computerPlayer;
     private HandleTurns handleTurns;
 
-    public HumanVsComputer(String firstPlayer, String secondPlayer, String firstToken, String secondToken ) {
+    public HumanVsComputer(String firstPlayer, String firstToken, String secondToken ) {
 
         board = new Board();
         gameState = new GameState();
@@ -30,7 +30,7 @@ public class HumanVsComputer {
         humanPlayer = new HumanPlayer();
         handleTurns = new HandleTurns();
 
-        setUp(firstPlayer, secondPlayer, firstToken, secondToken);
+        setUp(firstPlayer, firstToken, secondToken);
 
     }
 
@@ -50,7 +50,7 @@ public class HumanVsComputer {
         return gameState;
     }
 
-    public void setUp( String firstPlayer, String secondPlayer, String firstToken, String secondToken ) {
+    public void setUp( String firstPlayer, String firstToken, String secondToken ) {
         handleTurns.setCurrentPlayerToken(firstToken);
         if( firstPlayer == "Human" ) {
             humanPlayer.setToken(firstToken);
@@ -58,6 +58,14 @@ public class HumanVsComputer {
         } else {
             computerPlayer.setToken(firstToken);
             humanPlayer.setToken(secondToken);
+        }
+    }
+
+    public void start() {
+        while (gameState.finished(board)) {
+            if(handleTurns.getCurrentPlayerToken() == humanPlayer.getToken() ) {
+
+            }
         }
     }
 }
