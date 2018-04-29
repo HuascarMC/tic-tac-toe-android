@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#333333"
-    tools:context="com.example.huascar.tic_tac_toe.activities.SecondPlayerSetup">
+    tools:context="com.example.huascar.tic_tac_toe.activities.Play">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="382dp"
@@ -22,7 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.827"
-        tools:context="com.example.huascar.tic_tac_toe.activities.SecondPlayerSetup">
+        tools:context="com.example.huascar.tic_tac_toe.activities.Play">
 
         <View
             android:id="@+id/view6"
@@ -99,6 +99,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginStart="56dp"
             android:layout_marginTop="156dp"
+            android:onClick="onGridClick"
             app:layout_constraintBottom_toTopOf="@+id/grid_7"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.013"
@@ -115,6 +116,7 @@
             android:layout_marginLeft="52dp"
             android:layout_marginRight="8dp"
             android:layout_marginStart="52dp"
+            android:onClick="onClick"
             app:layout_constraintBottom_toTopOf="@+id/grid_1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.04"
@@ -132,6 +134,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:onClick="onClick"
             app:layout_constraintBottom_toTopOf="@+id/grid_6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.027"
@@ -149,6 +152,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginStart="52dp"
             android:layout_marginTop="8dp"
+            android:onClick="onClick"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.052"

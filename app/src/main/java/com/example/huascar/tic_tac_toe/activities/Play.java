@@ -2,6 +2,7 @@ package com.example.huascar.tic_tac_toe.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
 
 import com.example.huascar.tic_tac_toe.R;
@@ -24,12 +25,17 @@ public class Play extends AppCompatActivity {
 
         gridOne = findViewById(R.id.grid_1);
         gridTwo = findViewById(R.id.grid_2);
-        gridThree = findViewById(R.id.grid_3);
+        gridThree = findViewById(R.id.grid_1);
         gridFour = findViewById(R.id.grid_4);
         gridFive = findViewById(R.id.grid_5);
         gridSix = findViewById(R.id.grid_6);
         gridSeven = findViewById(R.id.grid_7);
         gridEigth = findViewById(R.id.grid_8);
+    }
+
+    public void onGridClick(View textView) {
+        TextView grid = (TextView) textView;
+        grid.setText("X");
     }
 
 

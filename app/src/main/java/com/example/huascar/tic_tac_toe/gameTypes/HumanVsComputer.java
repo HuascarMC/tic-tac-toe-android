@@ -64,8 +64,10 @@ public class HumanVsComputer {
     }
 
     public void start() {
-        while (gameState.finished(board)) {
-            if(handleTurns.getCurrentPlayerToken() == humanPlayer.getToken() ) {
+        while (!gameState.finished(board)) {
+            if( handleTurns.getCurrentPlayerToken() == humanPlayer.getToken() ) {
+
+            } else {
 
             }
         }
