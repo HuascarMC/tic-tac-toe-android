@@ -38,7 +38,6 @@ public class GameStateTest {
         newGrid = new String[]{"X", "O", "X", "O", "X", "O", "O", "X", "O"};
         board.setGrid(newGrid);
         assertEquals( gameState.finished(board), true );
-
     }
 
     @Test

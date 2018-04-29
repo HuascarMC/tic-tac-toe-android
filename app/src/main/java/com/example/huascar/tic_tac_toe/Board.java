@@ -27,20 +27,19 @@ public class Board implements Cloneable {
     public String[] getAvailableSpots() {
         ArrayList<String> resultList = new ArrayList<String>();
         for(int i = 0; i < grid.length; i++) {
-            if(grid[i] != "X" && grid[i] != "O") {
+            if(!grid[i].equals("X") && !grid[i].equals("O")) {
                 resultList.add(grid[i]);
             }
         }
-        String[] result = resultList.toArray(new String[resultList.size()]);
-        return result;
+        return resultList.toArray(new String[resultList.size()]);
     }
 
     public void reset() {
         grid = new String[]{"0", "1", "2", "3", "4", "5", "6", "7", "8"};
     }
 
-    public void setSpot(int i, String x) {
-        grid[i] = x;
+    public void setSpot(int i, String token) {
+        grid[i] = token;
     }
 
     public void setGrid(String[] grid) {

@@ -3,6 +3,7 @@ package com.example.huascar.tic_tac_toe.gameTypes;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -101,17 +102,14 @@ public class HumanVsComputer extends AppCompatActivity {
 
     public void onClick(View textView) throws CloneNotSupportedException {
         TextView grid = (TextView) textView;
+        System.out.print(gameState.finished(board));
         if(!gameState.finished(board)) {
-            if(handleTurns.getCurrentPlayerToken().equals(humanPlayer.getToken())) {
-                int spot = Integer.parseInt((String) grid.getContentDescription());
-                humanPlayer.play(board, spot);
-                updateGrid();
-                handleTurns.change();
-            }
-//            else if(handleTurns.getCurrentPlayerToken().equals(computerPlayer.getToken())) {
-//                computerPlayer.play(board);
-//                updateGrid();
-//            }
+            int spot = Integer.parseInt((String) grid.getContentDescription());
+            humanPlayer.play(board, spot);
+            updateGrid();
+            handleTurns.change();
+            Log.d("board", board.getGrid()[0]);
+            System.out.println(gameState.finished(board));
         }
     }
 
