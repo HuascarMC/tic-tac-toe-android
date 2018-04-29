@@ -90,7 +90,9 @@ public class HumanVsComputer extends AppCompatActivity {
     public void onClick(View textView) {
         TextView grid = (TextView) textView;
         if(!gameState.finished(board)) {
-
+            int spot = Integer.parseInt((String) grid.getContentDescription());
+            humanPlayer.play(board, spot);
+            grid.setText(humanPlayer.getToken());
         }
     }
 }
