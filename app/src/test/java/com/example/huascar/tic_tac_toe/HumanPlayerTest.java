@@ -18,8 +18,8 @@ public class HumanPlayerTest {
     public void before() {
         humanPlayer = new HumanPlayer();
         humanPlayer.setToken("O");
-    board = new Board();
-}
+        board = new Board();
+    }
 
     @Test
     public void testHasToken() {

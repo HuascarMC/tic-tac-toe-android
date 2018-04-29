@@ -44,4 +44,9 @@ public class HumanVsComputerTest {
         assertNotNull( gameState );
     }
 
+    @Test
+    public void testHasHandleTurns() {
+        HandleTurns handleTurns = humanVsComputer.getHandleTurns();
+        assertNotNull( handleTurns );
+    }
 }

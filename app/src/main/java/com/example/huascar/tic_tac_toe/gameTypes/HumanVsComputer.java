@@ -50,6 +50,8 @@ public class HumanVsComputer {
         return gameState;
     }
 
+    public HandleTurns getHandleTurns() { return handleTurns; }
+
     public void setUp( String firstPlayer, String firstToken, String secondToken ) {
         handleTurns.setCurrentPlayerToken(firstToken);
         if( firstPlayer == "Human" ) {
