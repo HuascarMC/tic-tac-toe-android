@@ -35,20 +35,22 @@ public class HumanVsComputer extends AppCompatActivity {
     private TextView gridSix;
     private TextView gridSeven;
     private TextView gridEigth;
+    private TextView gridNine;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
 
-        gridOne = findViewById(R.id.grid_1);
+        gridOne = findViewById(R.id.grid_3);
         gridTwo = findViewById(R.id.grid_2);
-        gridThree = findViewById(R.id.grid_1);
-        gridFour = findViewById(R.id.grid_4);
-        gridFive = findViewById(R.id.grid_5);
-        gridSix = findViewById(R.id.grid_6);
-        gridSeven = findViewById(R.id.grid_7);
-        gridEigth = findViewById(R.id.grid_8);
+        gridThree = findViewById(R.id.grid_5);
+        gridFour = findViewById(R.id.grid_6);
+        gridFive = findViewById(R.id.grid_1);
+        gridSix = findViewById(R.id.grid_8);
+        gridSeven = findViewById(R.id.grid_4);
+        gridEigth = findViewById(R.id.grid_7);
+        gridNine = findViewById(R.id.grid_);
 
 
         board = new Board();
@@ -97,12 +99,32 @@ public class HumanVsComputer extends AppCompatActivity {
         }
     }
 
-    public void onClick(View textView) {
+    public void onClick(View textView) throws CloneNotSupportedException {
         TextView grid = (TextView) textView;
         if(!gameState.finished(board)) {
-            int spot = Integer.parseInt((String) grid.getContentDescription());
-            humanPlayer.play(board, spot);
-            grid.setText(humanPlayer.getToken());
+            if(handleTurns.getCurrentPlayerToken().equals(humanPlayer.getToken())) {
+                int spot = Integer.parseInt((String) grid.getContentDescription());
+                humanPlayer.play(board, spot);
+                updateGrid();
+                handleTurns.change();
+            }
+//            else if(handleTurns.getCurrentPlayerToken().equals(computerPlayer.getToken())) {
+//                computerPlayer.play(board);
+//                updateGrid();
+//            }
         }
+    }
+
+    public void updateGrid() {
+        String[] grid = board.getGrid();
+        gridOne.setText(grid[0]);
+        gridTwo.setText(grid[1]);
+        gridThree.setText(grid[2]);
+        gridFour.setText(grid[3]);
+        gridFive.setText(grid[4]);
+        gridSix.setText(grid[5]);
+        gridSeven.setText(grid[6]);
+        gridEigth.setText(grid[7]);
+        gridNine.setText(grid[8]);
     }
 }
