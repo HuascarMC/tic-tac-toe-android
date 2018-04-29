@@ -2,19 +2,23 @@ package com.example.huascar.tic_tac_toe.gameTypes;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
 
 import com.example.huascar.tic_tac_toe.Board;
 import com.example.huascar.tic_tac_toe.ComputerPlayer;
 import com.example.huascar.tic_tac_toe.GameState;
+import com.example.huascar.tic_tac_toe.GameType;
 import com.example.huascar.tic_tac_toe.HandleTurns;
 import com.example.huascar.tic_tac_toe.HumanPlayer;
+import com.example.huascar.tic_tac_toe.Player;
 import com.example.huascar.tic_tac_toe.R;
 
 /**
  * Created by huascar on 11/04/2018.
  */
 
-public class HumanVsComputer {
+public class HumanVsComputer extends AppCompatActivity {
 
     private Board board;
     private GameState gameState;
@@ -22,7 +26,19 @@ public class HumanVsComputer {
     private ComputerPlayer computerPlayer;
     private HandleTurns handleTurns;
 
-    public HumanVsComputer(String firstPlayer, String firstToken, String secondToken ) {
+    private TextView gridOne;
+    private TextView gridTwo;
+    private TextView gridThree;
+    private TextView gridFour;
+    private TextView gridFive;
+    private TextView gridSix;
+    private TextView gridSeven;
+    private TextView gridEigth;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_play);
 
         board = new Board();
         gameState = new GameState();
@@ -30,8 +46,13 @@ public class HumanVsComputer {
         humanPlayer = new HumanPlayer();
         handleTurns = new HandleTurns();
 
-        setUp(firstPlayer, firstToken, secondToken);
+        Intent intent = getIntent();
 
+        Bundle extra = intent.getExtras();
+        String firstPlayer = extra.getString("firstPlayer");
+        String firstToken = extra.getString("firstToken");
+
+        this.setUp(firstPlayer, firstToken);
     }
 
     public Board getBoard() {
@@ -52,14 +73,16 @@ public class HumanVsComputer {
 
     public HandleTurns getHandleTurns() { return handleTurns; }
 
-    public void setUp( String firstPlayer, String firstToken, String secondToken ) {
+    public void setUp( String firstPlayer, String firstToken) {
         handleTurns.setCurrentPlayerToken(firstToken);
-        if( firstPlayer == "Human" ) {
+        if( firstPlayer.equals("Human") ) {
             humanPlayer.setToken(firstToken);
-            computerPlayer.setToken(secondToken);
+            computerPlayer.autoToken(firstToken);
+            handleTurns.setCurrentPlayerToken(firstToken);
         } else {
             computerPlayer.setToken(firstToken);
-            humanPlayer.setToken(secondToken);
+            humanPlayer.autoToken(firstToken);
+            handleTurns.setCurrentPlayerToken(firstToken);
         }
     }
 
