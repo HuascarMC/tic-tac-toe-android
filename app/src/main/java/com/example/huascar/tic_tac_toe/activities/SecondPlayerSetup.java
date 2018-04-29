@@ -10,10 +10,6 @@ import android.widget.Button;
 import com.example.huascar.tic_tac_toe.R;
 import com.example.huascar.tic_tac_toe.gameTypes.HumanVsComputer;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class SecondPlayerSetup extends AppCompatActivity {
 
     private String secondToken;
@@ -66,7 +62,7 @@ public class SecondPlayerSetup extends AppCompatActivity {
         button.setTextColor(Color.parseColor("#FDA570"));
 
         if( secondPlayer != null && secondToken != null ) {
-            Intent intent = new Intent(SecondPlayerSetup.this, Play.class);
+            Intent intent = new Intent(SecondPlayerSetup.this, HumanVsComputer.class);
             intent.putExtra("firstPlayer", firstPlayer);
             intent.putExtra("firstToken", firstToken);
             intent.putExtra("secondPlayer", secondPlayer);

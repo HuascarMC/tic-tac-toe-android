@@ -41,6 +41,16 @@ public class HumanVsComputer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
 
+        gridOne = findViewById(R.id.grid_1);
+        gridTwo = findViewById(R.id.grid_2);
+        gridThree = findViewById(R.id.grid_1);
+        gridFour = findViewById(R.id.grid_4);
+        gridFive = findViewById(R.id.grid_5);
+        gridSix = findViewById(R.id.grid_6);
+        gridSeven = findViewById(R.id.grid_7);
+        gridEigth = findViewById(R.id.grid_8);
+
+
         board = new Board();
         gameState = new GameState();
         computerPlayer = new ComputerPlayer();
@@ -53,7 +63,7 @@ public class HumanVsComputer extends AppCompatActivity {
         String firstPlayer = extra.getString("firstPlayer");
         String firstToken = extra.getString("firstToken");
 
-        this.setUp(firstPlayer, firstToken);
+        setUp(firstPlayer, firstToken);
     }
 
     public Board getBoard() {
