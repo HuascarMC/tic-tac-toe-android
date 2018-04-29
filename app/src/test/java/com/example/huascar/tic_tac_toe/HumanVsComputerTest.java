@@ -49,4 +49,11 @@ public class HumanVsComputerTest {
         HandleTurns handleTurns = humanVsComputer.getHandleTurns();
         assertNotNull( handleTurns );
     }
+
+    @Test
+    public void testSetUpHuman() {
+        HumanPlayer humanPlayer = humanVsComputer.getHumanPlayer();
+        String result = humanPlayer.getToken();
+        assertEquals( "X", result);
+    }
 }
