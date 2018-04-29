@@ -56,4 +56,11 @@ public class HumanVsComputerTest {
         String result = humanPlayer.getToken();
         assertEquals( "X", result);
     }
+
+    @Test
+    public void testSetUpBot() {
+        ComputerPlayer computerPlayer = humanVsComputer.getComputerPlayer();
+        String result = computerPlayer.getToken();
+        assertEquals( "O", result);
+    }
 }
