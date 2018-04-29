@@ -33,7 +33,7 @@ public class Play extends AppCompatActivity {
         gridEigth = findViewById(R.id.grid_8);
     }
 
-    public void onGridClick(View textView) {
+    public void onClick(View textView) {
         TextView grid = (TextView) textView;
         grid.setText("X");
     }
