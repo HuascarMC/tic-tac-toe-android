@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#333333"
-    tools:context="com.example.huascar.tic_tac_toe.activities.Play">
+    tools:context="com.example.huascar.tic_tac_toe.gameTypes.HumanVsComputer">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="382dp"
@@ -22,7 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.827"
-        tools:context="com.example.huascar.tic_tac_toe.activities.Play">
+        tools:context="com.example.huascar.tic_tac_toe.gameTypes.HumanVsComputer">
 
         <View
             android:id="@+id/view6"
@@ -99,6 +99,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginStart="56dp"
             android:layout_marginTop="156dp"
+            android:contentDescription="@string/four"
             android:gravity="center"
             android:onClick="onClick"
             android:textSize="60sp"
@@ -118,6 +119,7 @@
             android:layout_marginLeft="52dp"
             android:layout_marginRight="8dp"
             android:layout_marginStart="52dp"
+            android:contentDescription="@string/one"
             android:gravity="center"
             android:onClick="onClick"
             android:textSize="60sp"
@@ -138,6 +140,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:contentDescription="@string/zero"
             android:gravity="center"
             android:onClick="onClick"
             android:textSize="60sp"
@@ -158,6 +161,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginStart="52dp"
             android:layout_marginTop="8dp"
+            android:contentDescription="@string/five"
             android:gravity="center"
             android:onClick="onClick"
             android:textSize="60sp"
@@ -177,6 +181,7 @@
             android:layout_marginRight="52dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="284dp"
+            android:contentDescription="@string/seven"
             android:gravity="center"
             android:onClick="onClick"
             android:textSize="60sp"
@@ -197,6 +202,7 @@
             android:layout_marginRight="28dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="52dp"
+            android:contentDescription="@string/eight"
             android:gravity="center"
             android:onClick="onClick"
             android:textSize="60sp"
@@ -217,6 +223,7 @@
             android:layout_marginRight="52dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="284dp"
+            android:contentDescription="@string/six"
             android:gravity="center"
             android:onClick="onClick"
             android:textSize="60sp"
@@ -237,6 +244,7 @@
             android:layout_marginRight="288dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:contentDescription="@string/three"
             android:gravity="center"
             android:onClick="onClick"
             android:textSize="60sp"
@@ -256,6 +264,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginStart="52dp"
             android:layout_marginTop="8dp"
+            android:contentDescription="@string/two"
             android:gravity="center"
             android:onClick="onClick"
             android:textSize="60sp"

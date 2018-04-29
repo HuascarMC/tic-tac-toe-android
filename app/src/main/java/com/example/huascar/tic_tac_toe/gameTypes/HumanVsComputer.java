@@ -3,6 +3,7 @@ package com.example.huascar.tic_tac_toe.gameTypes;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
 
 import com.example.huascar.tic_tac_toe.Board;
@@ -86,13 +87,10 @@ public class HumanVsComputer extends AppCompatActivity {
         }
     }
 
-    public void start() {
-        while (!gameState.finished(board)) {
-            if( handleTurns.getCurrentPlayerToken() == humanPlayer.getToken() ) {
+    public void onClick(View textView) {
+        TextView grid = (TextView) textView;
+        if(!gameState.finished(board)) {
 
-            } else {
-
-            }
         }
     }
 }
