@@ -102,14 +102,12 @@ public class HumanVsComputer extends AppCompatActivity {
 
     public void onClick(View textView) throws CloneNotSupportedException {
         TextView grid = (TextView) textView;
-        System.out.print(gameState.finished(board));
         if(!gameState.finished(board)) {
             int spot = Integer.parseInt((String) grid.getContentDescription());
             humanPlayer.play(board, spot);
             updateGrid();
-            handleTurns.change();
-            Log.d("board", board.getGrid()[0]);
-            System.out.println(gameState.finished(board));
+            computerPlayer.play(board);
+            updateGrid();
         }
     }
 
