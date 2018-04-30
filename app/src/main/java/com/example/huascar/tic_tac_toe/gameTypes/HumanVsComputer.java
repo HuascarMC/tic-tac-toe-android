@@ -37,6 +37,7 @@ public class HumanVsComputer extends AppCompatActivity {
     private TextView gridSeven;
     private TextView gridEigth;
     private TextView gridNine;
+    private TextView result;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -52,7 +53,7 @@ public class HumanVsComputer extends AppCompatActivity {
         gridSeven = findViewById(R.id.grid_4);
         gridEigth = findViewById(R.id.grid_7);
         gridNine = findViewById(R.id.grid_);
-
+        result = findViewById(R.id.result);
 
         board = new Board();
         gameState = new GameState();
