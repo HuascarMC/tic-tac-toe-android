@@ -1,5 +1,7 @@
 package com.example.huascar.tic_tac_toe;
 
+import android.util.Log;
+
 /**
  * Created by huascar on 08/04/2018.
  */
@@ -71,7 +73,7 @@ public class AI {
                 bestSpot = availableSpot;
             }
         }
-
+        System.out.print(bestSpot);
         return new Object[]{bestSpot, bestScore};
     }
 
