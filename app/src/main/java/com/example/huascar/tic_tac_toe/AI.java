@@ -28,7 +28,7 @@ public class AI {
     }
 
     public void setOpponentToken() {
-        if(this.token == "X") {
+        if(this.token.equals("X")) {
             opponentToken = "O";
         } else {
             opponentToken = "X";
