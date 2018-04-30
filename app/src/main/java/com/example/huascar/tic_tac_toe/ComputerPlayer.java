@@ -24,7 +24,7 @@ public class ComputerPlayer extends Player {
     }
 
     public void autoToken(String token) {
-        if(token == "X") {
+        if(token.equals("X")) {
             this.setToken("O");
         } else {
             this.setToken("X");
