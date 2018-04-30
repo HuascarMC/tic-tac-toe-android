@@ -10,10 +10,10 @@ public class AI {
     GameState gameState;
     private String opponentToken;
 
-    public AI(String token) {
+    AI(String token) {
         this.token = token;
-        this.gameState = new GameState();
-        this.opponentToken = null;
+        gameState = new GameState();
+        opponentToken = null;
 
         setOpponentToken();
     }
@@ -28,7 +28,7 @@ public class AI {
     }
 
     public void setOpponentToken() {
-        if(this.token.equals("X")) {
+        if(token.equals("X")) {
             opponentToken = "O";
         } else {
             opponentToken = "X";
@@ -40,7 +40,7 @@ public class AI {
         if( !grid[4].equals("X") && !grid[4].equals("O")) {
             return 4;
         } else {
-            return Integer.parseInt((String) this.maximizedSpot(board)[0]);
+            return Integer.parseInt((String) maximizedSpot(board)[0]);
         }
     }
 
@@ -55,12 +55,12 @@ public class AI {
 
         for(String availableSpot: availableSpots) {
             int spot = Integer.parseInt(availableSpot);
-            boardClone.setSpot(spot, this.token);
+            boardClone.setSpot(spot, token);
 
             if( gameState.finished(boardClone) ) {
-                score = this.getScore(boardClone);
+                score = getScore(boardClone);
             } else {
-                Object[] minimizedSpot = this.minimizedSpot(boardClone);
+                Object[] minimizedSpot = minimizedSpot(boardClone);
                 score = (int) minimizedSpot[1];
             }
             boardClone = (Board) board.clone();
@@ -84,12 +84,12 @@ public class AI {
 
         for(String availableSpot: availableSpots) {
             int spot = Integer.parseInt(availableSpot);
-            boardClone.setSpot(spot, this.opponentToken);
+            boardClone.setSpot(spot, opponentToken);
 
             if ( gameState.finished(boardClone) ) {
-                score = this.getScore(boardClone);
+                score = getScore(boardClone);
             } else {
-                Object[] maximizedSpot = this.maximizedSpot(boardClone);
+                Object[] maximizedSpot = maximizedSpot(boardClone);
                 score = (int) maximizedSpot[1];
             }
             boardClone = (Board) board.clone();

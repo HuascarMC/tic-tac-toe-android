@@ -88,14 +88,12 @@ public class AITest {
     }
 
     @Test
-    public void testMinimizedSpotCaseLosing3() throws CloneNotSupportedException {
+    public void testGetBestSpotCaseLosing() throws CloneNotSupportedException {
         newGrid = new String[]{"0", "1", "X",
                                "3", "X", "O",
                                "6", "O", "O"};
         board.setGrid(newGrid);
-        Object[] result = new Object[]{"6", -1};
-        System.out.println(Arrays.toString(miniMax.minimizedSpot(board)));
-        assertTrue( Arrays.equals( miniMax.minimizedSpot(board), result) );
+        assertEquals( miniMax.getBestSpot(board), 6 );
     }
 
     @Test
