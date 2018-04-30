@@ -139,14 +139,6 @@ public class BoardTest {
     }
 
     @Test
-    public void testCloneBoard() throws CloneNotSupportedException {
-        Board cloneBoard = (Board) board.clone();
-        String[] grid = board.getGrid();
-        String[] cloneGrid = cloneBoard.getGrid();
-        assertEquals( grid, cloneGrid );
-    }
-
-    @Test
     public void testCopyConstructor() {
         String[] newGrid = new String[]{"O", "1", "X", "O", "X", "5", "O", "7", "8"};
         board.setGrid(newGrid);

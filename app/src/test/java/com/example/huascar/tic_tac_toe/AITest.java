@@ -3,13 +3,9 @@ package com.example.huascar.tic_tac_toe;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
-import dalvik.annotation.TestTarget;
-
 import static junit.framework.Assert.*;
-import static org.junit.Assert.assertThat;
 
 /**
  * Created by huascar on 08/04/2018.
