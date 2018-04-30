@@ -15,22 +15,19 @@ public class GameState {
     public boolean checkTie(Board board) {
         String[] availableSpots = board.getAvailableSpots();
 
-        if( availableSpots.length == 0 && checkWin(board) == false ) {
-            return true;
-        }
-        return false;
+        return availableSpots.length == 0 && !checkWin(board);
     }
 
     public boolean checkWin(Board board) {
         int[][] winCombinations = board.getWinCombinations();
         String[] grid = board.getGrid();
 
-        for( int i = 0; i < winCombinations.length; i++ ) {
-            boolean combinationState = checkWinCombination(winCombinations[i], board);
+        for (int[] winCombination : winCombinations) {
+            boolean combinationState = checkWinCombination(winCombination, board);
 
-            if( combinationState ) {
+            if (combinationState) {
                 // Get token inside winCombination and set to winner variable.
-                setWinnerToken( grid[winCombinations[i][0]] );
+                setWinnerToken(grid[winCombination[0]]);
                 return true;
             }
         }
