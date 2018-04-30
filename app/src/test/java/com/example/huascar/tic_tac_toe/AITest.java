@@ -49,7 +49,7 @@ public class AITest {
     }
 
     @Test
-    public void testBestSpotCaseSecondPlay() throws CloneNotSupportedException {
+    public void testBestSpotCaseSecondTurn() throws CloneNotSupportedException {
         String[] newGrid = new String[]{"0", "1", "2",
                                         "3", "X", "5",
                                         "6", "7", "8"};
@@ -97,7 +97,7 @@ public class AITest {
     }
 
     @Test
-    public void testMaximizedSpotCaseSecondPlay() throws CloneNotSupportedException {
+    public void testMaximizedSpotCaseSecondTurn() throws CloneNotSupportedException {
         newGrid = new String[]{"0", "1", "2",
                                "3", "O", "5",
                                "6", "7", "8"};
