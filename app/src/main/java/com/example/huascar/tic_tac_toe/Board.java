@@ -47,7 +47,7 @@ public class Board implements Cloneable {
     }
 
     @Override
-    public Object clone() throws CloneNotSupportedException {
+    public Object clone() {
         Board boardClone = null;
         try {
             boardClone = (Board) super.clone();

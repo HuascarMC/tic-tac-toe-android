@@ -32,7 +32,8 @@ public class ComputerPlayer extends Player {
     }
 
     public void play(Board board) throws CloneNotSupportedException {
-        int spot = this.AI.getBestSpot(board);
+        Board boardClone = (Board) board.clone();
+        int spot = this.AI.getBestSpot(boardClone);
         this.play(board, spot);
     }
 

@@ -49,6 +49,15 @@ public class AITest {
     }
 
     @Test
+    public void testBestSpotCaseSecondPlay() throws CloneNotSupportedException {
+        String[] newGrid = new String[]{"0", "1", "2",
+                "3", "X", "5",
+                "6", "7", "8"};
+        board.setGrid(newGrid);
+        assertEquals( 2, miniMax.getBestSpot(board));
+    }
+
+    @Test
     public void testMaximizedSpotCaseWinning() throws CloneNotSupportedException {
         newGrid = new String[]{"X", "O", "X",
                                "O", "X", "5",
