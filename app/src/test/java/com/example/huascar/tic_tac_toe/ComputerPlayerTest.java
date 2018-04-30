@@ -95,16 +95,10 @@ public class ComputerPlayerTest {
                                         "3", "X", "5",
                                         "6", "7", "8"};
         board.setGrid(newGrid);
-        try {
-            computerPlayer.play(board);
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-        }
+        computerPlayer.play(board);
         String[] result = new String[]{"0", "1", "O",
                                        "3", "X", "5",
                                        "6", "7", "8"};
-        System.out.print(board.getGrid()[1]);
-        System.out.print(result[1]);
         assertTrue( Arrays.deepEquals(board.getGrid(), result) );
     }
 }

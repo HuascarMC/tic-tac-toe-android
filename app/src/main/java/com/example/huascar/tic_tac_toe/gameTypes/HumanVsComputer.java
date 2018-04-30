@@ -106,11 +106,7 @@ public class HumanVsComputer extends AppCompatActivity {
             int spot = Integer.parseInt((String) grid.getContentDescription());
             humanPlayer.play(board, spot);
             updateGrid();
-            try {
-                computerPlayer.play(board);
-            } catch (CloneNotSupportedException e) {
-                e.printStackTrace();
-            }
+            computerPlayer.play(board);
             updateGrid();
         }
     }
