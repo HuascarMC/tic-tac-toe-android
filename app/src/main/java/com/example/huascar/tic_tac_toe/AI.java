@@ -106,9 +106,9 @@ public class AI {
     public int getScore(Board board) {
         if( gameState.finished(board) ) {
             String winnerToken = (gameState.getWinnerToken());
-            if( winnerToken.equals(token) ) {
+            if( winnerToken == token ) {
                 return 1;
-            } else if ( winnerToken.equals(opponentToken) ) {
+            } else if ( winnerToken == opponentToken ) {
                 return -1;
             }
         }
