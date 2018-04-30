@@ -1,7 +1,5 @@
 package com.example.huascar.tic_tac_toe;
 
-import android.util.Log;
-
 /**
  * Created by huascar on 08/04/2018.
  */
@@ -42,8 +40,7 @@ public class AI {
         if( !grid[4].equals("X") && !grid[4].equals("O")) {
             return 4;
         } else {
-            int bestSpot = Integer.parseInt((String) this.maximizedSpot(board)[0]);
-            return bestSpot;
+            return Integer.parseInt((String) this.maximizedSpot(board)[0]);
         }
     }
 
