@@ -7,7 +7,7 @@ package com.example.huascar.tic_tac_toe;
 public class AI {
 
     private String token;
-    GameState gameState;
+    private GameState gameState;
     private String opponentToken;
 
     AI(String token) {

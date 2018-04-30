@@ -96,9 +96,9 @@ public class ComputerPlayerTest {
                                         "6", "7", "8"};
         board.setGrid(newGrid);
         computerPlayer.play(board);
-        String[] result = new String[]{"0", "1", "O",
+        String[] result = new String[]{"0", "1", "2",
                                        "3", "X", "5",
-                                       "6", "7", "8"};
+                                       "6", "7", "O"};
         assertTrue( Arrays.deepEquals(board.getGrid(), result) );
     }
 }
