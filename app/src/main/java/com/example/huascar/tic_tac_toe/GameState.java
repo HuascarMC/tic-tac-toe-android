@@ -39,19 +39,11 @@ public class GameState {
 
     public boolean checkWinCombination(int[] combination, Board board) {
         String[] grid = board.getGrid();
-        if( grid[combination[0]] == "X" && grid[combination[1]] == "X" && grid[combination[2]] == "X") {
-            return true;
-        } else if ( grid[combination[0]] == "O" && grid[combination[1]] == "O" && grid[combination[2]] == "O"){
-            return true;
-        }
-        return false;
+        return grid[combination[0]].equals("X") && grid[combination[1]].equals("X") && grid[combination[2]].equals("X") || grid[combination[0]].equals("O") && grid[combination[1]].equals("O") && grid[combination[2]].equals("O");
     }
 
     public boolean finished(Board board) {
-        if( checkWin(board) || checkTie(board) ) {
-            return true;
-        }
-        return false;
+        return checkWin(board) || checkTie(board);
     }
 
     public String getWinnerToken() {
