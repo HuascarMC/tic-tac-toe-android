@@ -3,6 +3,9 @@ package com.example.huascar.tic_tac_toe;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import static junit.framework.Assert.*;
 import static org.hamcrest.core.IsInstanceOf.instanceOf;
 import static org.junit.Assert.assertThat;
@@ -84,5 +87,24 @@ public class ComputerPlayerTest {
         ComputerPlayer computerPlayer = new ComputerPlayer();
         computerPlayer.setToken("O");
         assertThat( computerPlayer.AI, instanceOf(AI.class) );
+    }
+
+    @Test
+    public void testCanUseAI() {
+        String[] newGrid = new String[]{"0", "1", "2",
+                                        "3", "X", "5",
+                                        "6", "7", "8"};
+        board.setGrid(newGrid);
+        try {
+            computerPlayer.play(board);
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+        String[] result = new String[]{"0", "1", "O",
+                                       "3", "X", "5",
+                                       "6", "7", "8"};
+        System.out.print(board.getGrid()[0]);
+        System.out.print(result[0]);
+        assertTrue( Arrays.deepEquals(board.getGrid(), result) );
     }
 }
