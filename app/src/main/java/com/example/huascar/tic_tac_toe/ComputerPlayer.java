@@ -11,7 +11,7 @@ public class ComputerPlayer extends Player {
 
     public ComputerPlayer() {
         super();
-        AI AI = null;
+        this.AI = null;
     }
 
     public String getToken() {
@@ -43,7 +43,7 @@ public class ComputerPlayer extends Player {
 
     public void initializeAI() {
         if( token != null ) {
-            this.AI = new AI(token);
+            AI = new AI(token);
         }
     }
 
