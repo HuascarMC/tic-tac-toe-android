@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Created by huascar on 08/04/2018.
  */
 
-public class Board implements Cloneable {
+public class Board {
 
     private String[] grid;
     private int[][] winCombinations;
@@ -36,9 +36,9 @@ public class Board implements Cloneable {
 
     public String[] getAvailableSpots() {
         ArrayList<String> resultList = new ArrayList<String>();
-        for(int i = 0; i < grid.length; i++) {
-            if(!grid[i].equals("X") && !grid[i].equals("O")) {
-                resultList.add(grid[i]);
+        for (String aGrid : grid) {
+            if (!aGrid.equals("X") && !aGrid.equals("O")) {
+                resultList.add(aGrid);
             }
         }
         return resultList.toArray(new String[resultList.size()]);
@@ -56,14 +56,4 @@ public class Board implements Cloneable {
         this.grid = grid;
     }
 
-    @Override
-    public Object clone() {
-        Board boardClone = null;
-        try {
-            boardClone = (Board) super.clone();
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-        }
-        return boardClone;
-    }
 }

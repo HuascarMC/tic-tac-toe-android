@@ -44,31 +44,32 @@ public class AITest {
     }
 
     @Test
-    public void testBestSpotIsMiddleIfEmpty() throws CloneNotSupportedException {
+    public void testBestSpotIsMiddleIfEmpty() {
         assertEquals( miniMax.getBestSpot(board), 4 );
     }
 
     @Test
-    public void testBestSpotCaseSecondTurn() throws CloneNotSupportedException {
+    public void testBestSpotCaseSecondTurn() {
         String[] newGrid = new String[]{"0", "1", "2",
                                         "3", "X", "5",
                                         "6", "7", "8"};
         board.setGrid(newGrid);
-        assertEquals( 2, miniMax.getBestSpot(board) );
+        assertEquals( 5, miniMax.getBestSpot(board) );
     }
 
     @Test
-    public void testMaximizedSpotCaseWinning() throws CloneNotSupportedException {
+    public void testMaximizedSpotCaseWinning() {
         newGrid = new String[]{"X", "O", "X",
                                "O", "X", "5",
                                "O", "7", "8"};
         board.setGrid(newGrid);
         Object[] result = new Object[]{"8", 1};
+        System.out.println(Arrays.toString(miniMax.maximizedSpot(board)));
         assertTrue( Arrays.equals(miniMax.maximizedSpot(board), result) );
     }
 
     @Test
-    public void testMinimizedSpotCaseLosing() throws CloneNotSupportedException {
+    public void testMinimizedSpotCaseLosing() {
         newGrid = new String[]{"0", "O", "X",
                                "O", "X", "5",
                                "O", "7", "8"};
@@ -78,7 +79,7 @@ public class AITest {
     }
 
     @Test
-    public void testMinimizedSpotCaseLosing2() throws CloneNotSupportedException {
+    public void testMinimizedSpotCaseLosing2() {
         newGrid = new String[]{"0", "1", "2",
                                "3", "X", "O",
                                "6", "7", "O"};
@@ -88,7 +89,7 @@ public class AITest {
     }
 
     @Test
-    public void testGetBestSpotCaseLosing() throws CloneNotSupportedException {
+    public void testGetBestSpotCaseLosing() {
         newGrid = new String[]{"0", "1", "X",
                                "3", "X", "O",
                                "6", "O", "O"};
@@ -97,12 +98,12 @@ public class AITest {
     }
 
     @Test
-    public void testMaximizedSpotCaseSecondTurn() throws CloneNotSupportedException {
+    public void testMaximizedSpotCaseSecondTurn() {
         newGrid = new String[]{"0", "1", "2",
                                "3", "O", "5",
                                "6", "7", "8"};
         board.setGrid(newGrid);
-        Object[] result = new Object[]{"2", 1};
+        Object[] result = new Object[]{"8", 1};
         assertTrue( Arrays.equals( miniMax.maximizedSpot(board), result) );
     }
 

@@ -33,12 +33,7 @@ public class ComputerPlayer extends Player {
 
     public void play(Board board) {
         Board clone = new Board(board);
-        int spot = 0;
-        try {
-            spot = AI.getBestSpot(clone);
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-        }
+        int spot = AI.getBestSpot(clone);
         play(board, spot);
     }
 
