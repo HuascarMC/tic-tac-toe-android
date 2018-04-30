@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import dalvik.annotation.TestTarget;
 
@@ -54,7 +55,7 @@ public class AITest {
                                "O", "7", "8"};
         board.setGrid(newGrid);
         Object[] result = new Object[]{"8", 1};
-        assertEquals( miniMax.maximizedSpot(board)[0], result[0]);
+        assertTrue( Arrays.equals(miniMax.maximizedSpot(board), result));
     }
 
     @Test
