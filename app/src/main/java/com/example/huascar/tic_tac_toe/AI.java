@@ -39,7 +39,7 @@ public class AI {
 
     public int getBestSpot(Board board) throws CloneNotSupportedException {
         String[] grid = board.getGrid();
-        if( grid[4] != "X" && grid[4] != "O") {
+        if( !grid[4].equals("X") && !grid[4].equals("O")) {
             return 4;
         } else {
             int bestSpot = Integer.parseInt((String) this.maximizedSpot(board)[0]);
@@ -73,7 +73,6 @@ public class AI {
                 bestSpot = availableSpot;
             }
         }
-        System.out.print(bestSpot);
         return new Object[]{bestSpot, bestScore};
     }
 
