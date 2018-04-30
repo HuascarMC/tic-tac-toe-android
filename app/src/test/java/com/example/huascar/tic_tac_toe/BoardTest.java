@@ -155,8 +155,17 @@ public class BoardTest {
 
     @Test
     public void testCopyConstructorGrid() {
+        String[] newGrid = new String[]{"O", "1", "X", "O", "X", "5", "O", "7", "8"};
+        board.setGrid(newGrid);
         Board clone = new Board(board);
         assertTrue( Arrays.equals(board.getGrid(), clone.getGrid()) );
     }
+
+    @Test
+    public void testCopyConstructorWinCombinations() {
+        Board clone = new Board(board);
+        assertTrue( Arrays.deepEquals(board.getWinCombinations(), clone.getWinCombinations()) );
+    }
+
 
 }
