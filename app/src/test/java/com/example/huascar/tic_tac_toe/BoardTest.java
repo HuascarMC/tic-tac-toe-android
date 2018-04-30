@@ -139,11 +139,17 @@ public class BoardTest {
     }
 
     @Test
-    public void testCopyConstructor() {
+    public void testCopyConstructorGriDiffReference() {
         String[] newGrid = new String[]{"O", "1", "X", "O", "X", "5", "O", "7", "8"};
         board.setGrid(newGrid);
         Board clone = new Board(board);
         assertFalse( board.getGrid() == clone.getGrid() );
+    }
+
+    @Test
+    public void testCopyConstructorWinCombinationsDiffReference() {
+        Board clone = new Board(board);
+        assertFalse( board.getWinCombinations() == clone.getWinCombinations() );
     }
 
 }
