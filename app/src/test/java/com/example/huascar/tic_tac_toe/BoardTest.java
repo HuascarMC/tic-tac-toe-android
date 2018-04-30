@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import static junit.framework.Assert.*;
 import static org.junit.Assert.assertArrayEquals;
@@ -150,6 +151,12 @@ public class BoardTest {
     public void testCopyConstructorWinCombinationsDiffReference() {
         Board clone = new Board(board);
         assertFalse( board.getWinCombinations() == clone.getWinCombinations() );
+    }
+
+    @Test
+    public void testCopyConstructorGrid() {
+        Board clone = new Board(board);
+        assertTrue( Arrays.equals(board.getGrid(), clone.getGrid()) );
     }
 
 }
