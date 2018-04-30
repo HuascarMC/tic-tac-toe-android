@@ -146,4 +146,12 @@ public class BoardTest {
         assertEquals( grid, cloneGrid );
     }
 
+    @Test
+    public void testCopyConstructor() {
+        String[] newGrid = new String[]{"O", "1", "X", "O", "X", "5", "O", "7", "8"};
+        board.setGrid(newGrid);
+        Board clone = new Board(board);
+        assertFalse( board.getGrid() == clone.getGrid() );
+    }
+
 }
