@@ -40,7 +40,7 @@ public class AI {
         if( !grid[4].equals("X") && !grid[4].equals("O")) {
             return 4;
         } else {
-            return Integer.parseInt((String) maximizedSpot(board)[0]);
+            return Integer.parseInt((String) minimizedSpot(board)[0]);
         }
     }
 
@@ -63,7 +63,7 @@ public class AI {
                 Object[] minimizedSpot = minimizedSpot(boardClone);
                 score = (int) minimizedSpot[1];
             }
-            boardClone.setGrid(board.getGrid());
+//            boardClone.setGrid(board.getGrid());
 
             if( bestScore == 0 || score > bestScore ) {
                 bestScore = score;
@@ -92,7 +92,7 @@ public class AI {
                 Object[] maximizedSpot = maximizedSpot(boardClone);
                 score = (int) maximizedSpot[1];
             }
-            boardClone.setGrid(board.getGrid());
+//            boardClone.setGrid(board.getGrid());
 
             if (bestScore == 0 || score < bestScore) {
                 bestScore = score;

@@ -98,7 +98,7 @@ public class ComputerPlayerTest {
         computerPlayer.play(board);
         String[] result = new String[]{"0", "1", "2",
                                        "3", "X", "5",
-                                       "6", "7", "O"};
-        assertTrue( Arrays.deepEquals(board.getGrid(), result) );
+                                       "6", "7", "8"};
+        assertFalse( Arrays.deepEquals(board.getGrid(), result) );
     }
 }
