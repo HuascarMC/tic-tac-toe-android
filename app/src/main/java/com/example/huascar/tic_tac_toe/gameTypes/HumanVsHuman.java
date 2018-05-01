@@ -66,28 +66,27 @@ public class HumanVsHuman extends AppCompatActivity {
     }
 
     public void setUp(String firstToken) {
+
         handleTurns.setCurrentPlayerToken(firstToken);
             playerOne.setToken(firstToken);
             playerTwo.autoToken(firstToken);
-            System.out.println(playerTwo.getToken());
             handleTurns.setCurrentPlayerToken(firstToken);
     }
 
     public void onClick(View textView) {
         TextView grid = (TextView) textView;
         int spot = Integer.parseInt((String) grid.getContentDescription());
-        handleTurns.change();
         if (!gameState.finished(board)) {
             if (handleTurns.getCurrentPlayerToken().equals(playerOne.getToken())) {
                 playerOne.play(board, spot);
-                System.out.println(handleTurns.getCurrentPlayerToken());
-            } else {
+            } else if (handleTurns.getCurrentPlayerToken().equals(playerTwo.getToken())){
                 playerTwo.play(board, spot);
             }
             if(gameState.finished(board)) {
                 result.setText(String.format("%s wins!", gameState.getWinnerToken()));
             }
         }
+        handleTurns.change();
         updateGrid();
     }
 
