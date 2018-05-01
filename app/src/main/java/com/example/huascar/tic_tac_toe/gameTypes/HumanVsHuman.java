@@ -18,7 +18,7 @@ public class HumanVsHuman extends AppCompatActivity {
     private Board board;
     private GameState gameState;
     private HumanPlayer playerOne;
-    private ComputerPlayer playerTwo;
+    private HumanPlayer playerTwo;
     private HandleTurns handleTurns;
 
     private TextView gridOne;
@@ -50,48 +50,45 @@ public class HumanVsHuman extends AppCompatActivity {
 
         board = new Board();
         gameState = new GameState();
-        computerPlayer = new ComputerPlayer();
-        humanPlayer = new HumanPlayer();
+        playerOne = new HumanPlayer();
+        playerTwo = new HumanPlayer();
         handleTurns = new HandleTurns();
 
         Intent intent = getIntent();
 
         Bundle extra = intent.getExtras();
-        String firstPlayer = extra.getString("firstPlayer");
         String firstToken = extra.getString("firstToken");
 
-        setUp(firstPlayer, firstToken);
+        setUp(firstToken);
     }
 
     public Board getBoard() {
         return board;
     }
 
-    public void setUp( String firstPlayer, String firstToken) {
+    public void setUp(String firstToken) {
         handleTurns.setCurrentPlayerToken(firstToken);
-        if( firstPlayer.equals("Human") ) {
-            humanPlayer.setToken(firstToken);
-            computerPlayer.autoToken(firstToken);
+            playerOne.setToken(firstToken);
+            playerTwo.autoToken(firstToken);
             handleTurns.setCurrentPlayerToken(firstToken);
-        } else {
-            computerPlayer.setToken(firstToken);
-            humanPlayer.autoToken(firstToken);
-            handleTurns.setCurrentPlayerToken(firstToken);
-        }
     }
 
     public void onClick(View textView) {
         TextView grid = (TextView) textView;
-        if(!gameState.finished(board)) {
-            int spot = Integer.parseInt((String) grid.getContentDescription());
-            humanPlayer.play(board, spot);
-            updateGrid();
-            computerPlayer.play(board);
-            updateGrid();
+        int spot = Integer.parseInt((String) grid.getContentDescription());
+        if (!gameState.finished(board)) {
+            if (handleTurns.getCurrentPlayerToken().equals(playerOne.getToken())) {
+                playerOne.play(board, spot);
+                handleTurns.change();
+            } else {
+                playerTwo.play(board, spot);
+                handleTurns.change();
+            }
             if(gameState.finished(board)) {
                 result.setText(String.format("%s wins!", gameState.getWinnerToken()));
             }
         }
+        updateGrid();
     }
 
     public void updateGrid() {
