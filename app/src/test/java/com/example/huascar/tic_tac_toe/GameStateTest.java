@@ -71,15 +71,24 @@ public class GameStateTest {
     }
 
     @Test
-    public void testCheckTieFalse() {
+    public void testCheckTieFalseCaseOne() {
         assertEquals( gameState.checkTie(board), false );
     }
 
     @Test
-    public void testCheckTieTrue() {
+    public void testCheckTieTrueCaseOne() {
         newGrid = new String[]{"X", "O", "X", "O", "X", "O", "O", "X", "O"};
         board.setGrid(newGrid);
         assertEquals( gameState.checkTie(board), true );
+    }
+
+    @Test
+    public void testCheckTieTrueCaseTwo() {
+        newGrid = new String[]{"X", "O", "X",
+                               "O", "X", "5",
+                               "O", "7", "8"};
+        board.setGrid(newGrid);
+        assertEquals( gameState.checkTie(board), false);
     }
 
     @Test
