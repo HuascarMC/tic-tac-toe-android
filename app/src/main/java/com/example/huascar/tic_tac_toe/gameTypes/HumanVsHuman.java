@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.huascar.tic_tac_toe.Board;
-import com.example.huascar.tic_tac_toe.ComputerPlayer;
 import com.example.huascar.tic_tac_toe.GameState;
 import com.example.huascar.tic_tac_toe.HandleTurns;
 import com.example.huascar.tic_tac_toe.HumanPlayer;

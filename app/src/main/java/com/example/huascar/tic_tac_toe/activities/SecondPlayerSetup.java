@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.example.huascar.tic_tac_toe.R;
 import com.example.huascar.tic_tac_toe.gameTypes.HumanVsComputer;
+import com.example.huascar.tic_tac_toe.gameTypes.HumanVsHuman;
 
 public class SecondPlayerSetup extends AppCompatActivity {
 
@@ -57,16 +58,20 @@ public class SecondPlayerSetup extends AppCompatActivity {
         this.secondToken = token;
     }
 
+
     public void onPlayClick(View buttonView) {
         Button button = (Button) buttonView;
         button.setTextColor(Color.parseColor("#FDA570"));
 
-        if( secondPlayer != null && secondToken != null ) {
+        if( firstPlayer.equals("Human") && secondPlayer.equals("Bot") || firstPlayer.equals("Bot") && secondPlayer.equals("Human") ) {
             Intent intent = new Intent(SecondPlayerSetup.this, HumanVsComputer.class);
             intent.putExtra("firstPlayer", firstPlayer);
             intent.putExtra("firstToken", firstToken);
-            intent.putExtra("secondPlayer", secondPlayer);
-            intent.putExtra("secondToken", secondToken);
+            startActivity(intent);
+        } else if ( firstPlayer.equals("Human") && secondPlayer.equals("Human")) {
+            Intent intent = new Intent( SecondPlayerSetup.this, HumanVsHuman.class);
+            intent.putExtra("firstPlayer", firstPlayer);
+            intent.putExtra("firstToken", firstToken);
             startActivity(intent);
         }
         button.setTextColor(Color.parseColor("#F3EEEB"));
