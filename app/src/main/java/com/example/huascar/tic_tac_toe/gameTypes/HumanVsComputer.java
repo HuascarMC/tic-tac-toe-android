@@ -89,7 +89,7 @@ public class HumanVsComputer extends AppCompatActivity {
 
     public void onClick(View textView) {
         TextView grid = (TextView) textView;
-        if(!gameState.finished(board)) {
+        if(!gameState.finished(board) && !grid.getText().toString().equals("X") && !grid.getText().toString().equals("O")) {
             int spot = Integer.parseInt((String) grid.getContentDescription());
             humanPlayer.play(board, spot);
             updateGrid();
