@@ -53,9 +53,15 @@ public class GameStateTest {
     }
 
     @Test
-    public void testCheckWinCombinationState() {
+    public void testCheckWinCombinationStateOne() {
         int[] winCombination = board.getWinCombinations()[0];
         assertEquals( gameState.checkWinCombination(winCombination, board), false );
+    }
+
+    @Test
+    public void testCheckWinCombinationStateTwo() {
+        int[] winCombination = board.getWinCombinations()[1];
+        assertEquals( gameState.checkWinCombination(winCombination, board), false);
     }
 
     @Test
