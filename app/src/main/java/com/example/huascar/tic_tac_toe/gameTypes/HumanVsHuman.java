@@ -76,7 +76,7 @@ public class HumanVsHuman extends AppCompatActivity {
     public void onClick(View textView) {
         TextView grid = (TextView) textView;
         int spot = Integer.parseInt((String) grid.getContentDescription());
-        if (!gameState.finished(board)) {
+        if (!gameState.finished(board) && !grid.getText().toString().equals("X") && !grid.getText().toString().equals("O")) {
             if (handleTurns.getCurrentPlayerToken().equals(playerOne.getToken())) {
                 playerOne.play(board, spot);
             } else if (handleTurns.getCurrentPlayerToken().equals(playerTwo.getToken())){
