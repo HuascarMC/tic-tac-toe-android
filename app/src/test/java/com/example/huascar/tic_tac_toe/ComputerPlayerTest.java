@@ -40,7 +40,7 @@ public class ComputerPlayerTest {
     }
 
     @Test
-    public void testPlaySmart() throws CloneNotSupportedException {
+    public void testPlaySmart() {
         computerPlayer.play(board);
         String[] grid = board.getGrid();
         assertEquals( computerPlayer.getToken(), grid[4]);
