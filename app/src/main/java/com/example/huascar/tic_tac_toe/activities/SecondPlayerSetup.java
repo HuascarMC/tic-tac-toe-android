@@ -78,26 +78,6 @@ public class SecondPlayerSetup extends AppCompatActivity {
 
     }
 
-//    public void handleOnContinueClick() {
-//        List<String> players = Arrays.asList(firstPlayer, secondPlayer);
-//        Intent intent = null;
-//
-//        if( players.contains("Human") && players.contains("Bot") ) {
-//            intent = new Intent(SecondPlayerSetup.this, Play.class);
-//        } else if (players.contains("Human") && players.contains("Human")) {
-//            intent = new Intent(SecondPlayerSetup.this, Play.class);
-//
-//        } else if (players.contains("Bot") && players.contains("Bot")) {
-//            intent = new Intent(SecondPlayerSetup.this, Play.class);
-//        }
-//            intent.putExtra("firstPlayer", firstPlayer);
-//            intent.putExtra("firstToken", firstToken);
-//            intent.putExtra("secondPlayer", secondPlayer);
-//            intent.putExtra("secondToken", secondToken);
-//
-//            startActivity(intent);
-//    }
-
     public void onPreviousClick(View buttonView) {
         Button button = (Button) buttonView;
         button.setTextColor(Color.parseColor("#FDA570"));
