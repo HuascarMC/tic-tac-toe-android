@@ -8,11 +8,8 @@ Tic-tac-toe Android app with an UI that allows the user to play two different ty
 
 The project is being test-driven developed and as of now there's an issue with the AI class for the computer player. The MiniMax algorithm being implemented is passing all tests, doesn't prevent the opponent from winning in certain cases.
 
-![alt-text](/images/first-setup.png 100x20)
+<img src="/images/first-setup.png" width="250" height="400"> <img src="/images/second-setup.png" width="250" height="400"> <img src="/images/gameplay.png" width="250" height="400">
 
-![alt-text](/images/second-setup.png 150x70)
-
-![alt-text](/images/gameplay.png 150x100)
 
 ## Requirements
 
