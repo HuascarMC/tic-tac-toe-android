@@ -3,29 +3,22 @@ package com.example.huascar.tic_tac_toe.gameTypes;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 import com.example.huascar.tic_tac_toe.Board;
 import com.example.huascar.tic_tac_toe.ComputerPlayer;
 import com.example.huascar.tic_tac_toe.GameState;
-import com.example.huascar.tic_tac_toe.GameType;
 import com.example.huascar.tic_tac_toe.HandleTurns;
 import com.example.huascar.tic_tac_toe.HumanPlayer;
-import com.example.huascar.tic_tac_toe.Player;
 import com.example.huascar.tic_tac_toe.R;
 
-/**
- * Created by huascar on 11/04/2018.
- */
-
-public class HumanVsComputer extends AppCompatActivity {
+public class HumanVsHuman extends AppCompatActivity {
 
     private Board board;
     private GameState gameState;
-    private HumanPlayer humanPlayer;
-    private ComputerPlayer computerPlayer;
+    private HumanPlayer playerOne;
+    private ComputerPlayer playerTwo;
     private HandleTurns handleTurns;
 
     private TextView gridOne;
