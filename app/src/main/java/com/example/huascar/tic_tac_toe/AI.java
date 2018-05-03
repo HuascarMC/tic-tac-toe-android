@@ -40,11 +40,11 @@ public class AI {
         if( !grid[4].equals("X") && !grid[4].equals("O")) {
             return 4;
         } else {
-            return Integer.parseInt((String) minimizedSpot(board)[0]);
+            return Integer.parseInt((String) maximizedSpot(board, 0)[0]);
         }
     }
 
-    public Object[] maximizedSpot(Board board) {
+    public Object[] maximizedSpot(Board board, int depth) {
         Board boardClone = new Board(board);
 
         int bestScore = 0;
@@ -58,22 +58,23 @@ public class AI {
             boardClone.setSpot(spot, token);
 
             if( gameState.finished(boardClone) ) {
-                score = getScore(boardClone);
+                score = getScore(boardClone) - depth;
             } else {
-                Object[] minimizedSpot = minimizedSpot(boardClone);
-                score = (int) minimizedSpot[1];
+                Object[] minimizedSpot = minimizedSpot(boardClone, depth);
+                score = (int) minimizedSpot[1] - depth;
             }
-//            boardClone.setGrid(board.getGrid());
+            boardClone.setGrid(board.getGrid());
 
             if( bestScore == 0 || score > bestScore ) {
                 bestScore = score;
                 bestSpot = availableSpot;
             }
+            depth += 1;
         }
         return new Object[]{bestSpot, bestScore};
     }
 
-    public Object[] minimizedSpot(Board board) {
+    public Object[] minimizedSpot(Board board, int depth) {
         Board boardClone = new Board(board);
 
         int bestScore = 0;
@@ -87,18 +88,18 @@ public class AI {
             boardClone.setSpot(spot, opponentToken);
 
             if ( gameState.finished(boardClone) ) {
-                score = getScore(boardClone);
+                score = getScore(boardClone) - depth;
             } else {
-                Object[] maximizedSpot = maximizedSpot(boardClone);
-                score = (int) maximizedSpot[1];
+                Object[] maximizedSpot = maximizedSpot(boardClone, depth);
+                score = (int) maximizedSpot[1] - depth;
             }
-//            boardClone.setGrid(board.getGrid());
+            boardClone.setGrid(board.getGrid());
 
             if (bestScore == 0 || score < bestScore) {
                 bestScore = score;
                 bestSpot = availableSpot;
             }
-
+            depth += 1;
         }
         return new Object[]{bestSpot, bestScore};
     }
