@@ -96,4 +96,13 @@ public class AITest {
         board.setGrid(newGrid);
         assertEquals( miniMax.getScore(board), 1);
     }
+
+    @Test
+    public void testGetScoreCase3() {
+        newGrid = new String[]{"O", "1", "X",
+                               "O", "X", "5",
+                               "O", "7", "X"};
+        board.setGrid(newGrid);
+        assertEquals( -1, miniMax.getScore(board));
+    }
 }
