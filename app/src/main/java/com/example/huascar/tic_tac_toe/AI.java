@@ -40,7 +40,7 @@ public class AI {
         if( !grid[4].equals("X") && !grid[4].equals("O")) {
             return 4;
         } else {
-            return Integer.parseInt((String) maximizedSpot(board, 200)[0]);
+            return Integer.parseInt((String) maximizedSpot(board, 0)[0]);
         }
     }
 
