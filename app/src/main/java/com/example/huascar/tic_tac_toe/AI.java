@@ -40,7 +40,7 @@ public class AI {
         if( !grid[4].equals("X") && !grid[4].equals("O")) {
             return 4;
         } else {
-            return Integer.parseInt((String) minimizedSpot(board, 0)[0]);
+            return Integer.parseInt((String) maximizedSpot(board, 200)[0]);
         }
     }
 
@@ -50,7 +50,6 @@ public class AI {
         int bestScore = 0;
         String bestSpot = null;
         int score;
-        depth += 1;
 
         String[] availableSpots = boardClone.getAvailableSpots();
 
@@ -70,7 +69,12 @@ public class AI {
                 bestScore = score;
                 bestSpot = availableSpot;
             }
-
+            System.out.print("depth: " + depth + "; ");
+            System.out.print("bestspot: " + bestSpot + "; ");
+            System.out.print("bestscore: " + bestScore + "; ");
+            System.out.print("token: " + token);
+            System.out.println("----------------------");
+            depth += 1;
         }
         return new Object[]{bestSpot, bestScore};
     }
@@ -81,7 +85,8 @@ public class AI {
         int bestScore = 0;
         String bestSpot = null;
         int score;
-        depth += 1;
+
+
         String[] availableSpots = boardClone.getAvailableSpots();
 
         for(String availableSpot: availableSpots) {
@@ -100,7 +105,12 @@ public class AI {
                 bestScore = score;
                 bestSpot = availableSpot;
             }
-
+            System.out.println("depth: " + depth + ";");
+            System.out.print("bestspot: " + bestSpot + ";");
+            System.out.print("bestscore: " + bestScore + ";");
+            System.out.print("token: " + opponentToken);
+            System.out.println("----------------------");
+            depth += 1;
         }
         return new Object[]{bestSpot, bestScore};
     }
@@ -114,6 +124,6 @@ public class AI {
                 return -1 - depth;
             }
         }
-        return 0;
+        return 0 - depth;
     }
 }

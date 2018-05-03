@@ -45,13 +45,12 @@ public class AITest {
     }
 
     @Test
-    public void testMaximizedSpotCaseWinning() {
+    public void testMinimizedSpotCaseWinning() {
         newGrid = new String[]{"X", "O", "X",
                                "O", "X", "5",
                                "O", "7", "8"};
         board.setGrid(newGrid);
-        Object[] result = new Object[]{"8", 1};
-        assertTrue( Arrays.equals(miniMax.maximizedSpot(board, 0), result) );
+        assertEquals( "8", miniMax.minimizedSpot(board, 0)[0] );
     }
 
     @Test
@@ -83,7 +82,7 @@ public class AITest {
 
     @Test
     public void testGetScore() {
-        assertEquals( miniMax.getScore(board, 10), 0 );
+        assertEquals( miniMax.getScore(board, 0), 0 );
     }
 
     @Test
@@ -102,5 +101,14 @@ public class AITest {
                                "O", "7", "X"};
         board.setGrid(newGrid);
         assertEquals( -1, miniMax.getScore(board, 0));
+    }
+
+    @Test
+    public void testGetScoreCase4() {
+        newGrid = new String[]{"X", "O", "X",
+                               "O", "X", "5",
+                               "O", "O", "8"};
+        board.setGrid(newGrid);
+        assertEquals( 0, miniMax.getScore(board, 0));
     }
 }
