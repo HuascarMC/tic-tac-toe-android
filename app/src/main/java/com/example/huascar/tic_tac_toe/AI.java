@@ -40,7 +40,7 @@ public class AI {
         if( !grid[4].equals("X") && !grid[4].equals("O")) {
             return 4;
         } else {
-            return Integer.parseInt((String) maximizedSpot(board, 0)[0]);
+            return Integer.parseInt((String) minimizedSpot(board, 0)[0]);
         }
     }
 
@@ -50,6 +50,7 @@ public class AI {
         int bestScore = 0;
         String bestSpot = null;
         int score;
+        depth += 1;
 
         String[] availableSpots = boardClone.getAvailableSpots();
 
@@ -58,10 +59,10 @@ public class AI {
             boardClone.setSpot(spot, token);
 
             if( gameState.finished(boardClone) ) {
-                score = getScore(boardClone) - depth;
+                score = getScore(boardClone, depth);
             } else {
                 Object[] minimizedSpot = minimizedSpot(boardClone, depth);
-                score = (int) minimizedSpot[1] - depth;
+                score = (int) minimizedSpot[1];
             }
             boardClone.setGrid(board.getGrid());
 
@@ -69,7 +70,7 @@ public class AI {
                 bestScore = score;
                 bestSpot = availableSpot;
             }
-            depth += 1;
+
         }
         return new Object[]{bestSpot, bestScore};
     }
@@ -80,7 +81,7 @@ public class AI {
         int bestScore = 0;
         String bestSpot = null;
         int score;
-
+        depth += 1;
         String[] availableSpots = boardClone.getAvailableSpots();
 
         for(String availableSpot: availableSpots) {
@@ -88,10 +89,10 @@ public class AI {
             boardClone.setSpot(spot, opponentToken);
 
             if ( gameState.finished(boardClone) ) {
-                score = getScore(boardClone) - depth;
+                score = getScore(boardClone, depth);
             } else {
                 Object[] maximizedSpot = maximizedSpot(boardClone, depth);
-                score = (int) maximizedSpot[1] - depth;
+                score = (int) maximizedSpot[1];
             }
             boardClone.setGrid(board.getGrid());
 
@@ -99,18 +100,18 @@ public class AI {
                 bestScore = score;
                 bestSpot = availableSpot;
             }
-            depth += 1;
+
         }
         return new Object[]{bestSpot, bestScore};
     }
 
-    public int getScore(Board board) {
-        if( gameState.finished(board) && gameState.getWinnerToken() != null) {
+    public int getScore(Board board, int depth) {
+        if( gameState.finished(board) && gameState.getWinnerToken() != null ) {
             String winnerToken = (gameState.getWinnerToken());
             if(winnerToken.equals(token)) {
-                return 1;
+                return 1 - depth;
             } else if (winnerToken.equals(opponentToken)) {
-                return -1;
+                return -1 - depth;
             }
         }
         return 0;

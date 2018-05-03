@@ -69,8 +69,7 @@ public class AITest {
                                "3", "X", "O",
                                "6", "7", "O"};
         board.setGrid(newGrid);
-        Object[] result = new Object[]{"2", -1};
-        assertTrue( Arrays.equals( miniMax.minimizedSpot(board, 0), result) );
+        assertEquals( "2", miniMax.minimizedSpot(board, 0)[0] );
     }
 
     @Test
@@ -84,7 +83,7 @@ public class AITest {
 
     @Test
     public void testGetScore() {
-        assertEquals( miniMax.getScore(board), 0 );
+        assertEquals( miniMax.getScore(board, 10), 0 );
     }
 
     @Test
@@ -93,7 +92,7 @@ public class AITest {
                                "O", "X", "5",
                                "O", "7", "X"};
         board.setGrid(newGrid);
-        assertEquals( miniMax.getScore(board), 1);
+        assertEquals( miniMax.getScore(board, 0), 1);
     }
 
     @Test
@@ -102,6 +101,6 @@ public class AITest {
                                "O", "X", "5",
                                "O", "7", "X"};
         board.setGrid(newGrid);
-        assertEquals( -1, miniMax.getScore(board));
+        assertEquals( -1, miniMax.getScore(board, 0));
     }
 }
