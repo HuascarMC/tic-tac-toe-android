@@ -56,6 +56,7 @@ public class AI {
         for(String availableSpot: availableSpots) {
             int spot = Integer.parseInt(availableSpot);
             boardClone.setSpot(spot, token);
+            depth += 1;
 
             if( gameState.finished(boardClone) ) {
                 score = getScore(boardClone, depth);
@@ -69,12 +70,7 @@ public class AI {
                 bestScore = score;
                 bestSpot = availableSpot;
             }
-            System.out.print("depth: " + depth + "; ");
-            System.out.print("bestspot: " + bestSpot + "; ");
-            System.out.print("bestscore: " + bestScore + "; ");
-            System.out.print("token: " + token);
-            System.out.println("----------------------");
-            depth += 1;
+
         }
         return new Object[]{bestSpot, bestScore};
     }
@@ -92,6 +88,7 @@ public class AI {
         for(String availableSpot: availableSpots) {
             int spot = Integer.parseInt(availableSpot);
             boardClone.setSpot(spot, opponentToken);
+            depth += 1;
 
             if ( gameState.finished(boardClone) ) {
                 score = getScore(boardClone, depth);
@@ -105,12 +102,6 @@ public class AI {
                 bestScore = score;
                 bestSpot = availableSpot;
             }
-            System.out.println("depth: " + depth + ";");
-            System.out.print("bestspot: " + bestSpot + ";");
-            System.out.print("bestscore: " + bestScore + ";");
-            System.out.print("token: " + opponentToken);
-            System.out.println("----------------------");
-            depth += 1;
         }
         return new Object[]{bestSpot, bestScore};
     }
