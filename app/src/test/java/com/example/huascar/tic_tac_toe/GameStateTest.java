@@ -111,4 +111,12 @@ public class GameStateTest {
         assertEquals( gameState.getWinnerToken(), "O");
     }
 
+    @Test
+    public void testFinishedCase2() {
+        newGrid = new String[]{"O", "O", "X",
+                               "O", "X", "5",
+                               "O", "7", "8"};
+        board.setGrid(newGrid);
+        assertEquals( true, gameState.finished(board));
+    }
 }
