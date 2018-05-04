@@ -54,12 +54,12 @@ public class AITest {
     }
 
     @Test
-    public void testMinimizedSpotCaseLosing() {
+    public void testGetBestSpotCaseLosingCase2() {
         newGrid = new String[]{"0", "O", "X",
                                "O", "X", "5",
                                "O", "7", "8"};
         board.setGrid(newGrid);
-        assertEquals( "0", miniMax.minimizedSpot(board, 0)[0] );
+        assertEquals( 0, miniMax.getBestSpot(board) );
     }
 
     @Test
@@ -91,7 +91,7 @@ public class AITest {
                                "O", "X", "5",
                                "O", "7", "X"};
         board.setGrid(newGrid);
-        assertEquals( miniMax.getScore(board, 0), 1);
+        assertEquals( miniMax.getScore(board, 0), -1);
     }
 
     @Test
@@ -100,7 +100,7 @@ public class AITest {
                                "O", "X", "5",
                                "O", "7", "X"};
         board.setGrid(newGrid);
-        assertEquals( -1, miniMax.getScore(board, 0));
+        assertEquals( 1, miniMax.getScore(board, 0));
     }
 
     @Test

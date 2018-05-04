@@ -1,5 +1,7 @@
 package com.example.huascar.tic_tac_toe;
 
+import java.util.Arrays;
+
 /**
  * Created by huascar on 08/04/2018.
  */
@@ -52,12 +54,10 @@ public class AI {
         int score;
 
         String[] availableSpots = boardClone.getAvailableSpots();
-
         for(String availableSpot: availableSpots) {
             int spot = Integer.parseInt(availableSpot);
-            boardClone.setSpot(spot, token);
+            boardClone.setSpot(spot, opponentToken);
             depth += 1;
-
             if( gameState.finished(boardClone) ) {
                 score = getScore(boardClone, depth);
             } else {
@@ -84,10 +84,9 @@ public class AI {
 
 
         String[] availableSpots = boardClone.getAvailableSpots();
-
         for(String availableSpot: availableSpots) {
             int spot = Integer.parseInt(availableSpot);
-            boardClone.setSpot(spot, opponentToken);
+            boardClone.setSpot(spot, token);
             depth += 1;
 
             if ( gameState.finished(boardClone) ) {
@@ -110,11 +109,11 @@ public class AI {
         if( gameState.finished(board) && gameState.getWinnerToken() != null ) {
             String winnerToken = (gameState.getWinnerToken());
             if(winnerToken.equals(token)) {
-                return 1 - depth;
+                return -1;
             } else if (winnerToken.equals(opponentToken)) {
-                return -1 - depth;
+                return 1;
             }
         }
-        return 0 - depth;
+        return 0;
     }
 }
