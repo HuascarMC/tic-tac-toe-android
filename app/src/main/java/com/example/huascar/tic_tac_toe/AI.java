@@ -11,6 +11,7 @@ public class AI {
     private String token;
     private GameState gameState;
     private String opponentToken;
+    private int score = 0;
 
     AI(String token) {
         this.token = token;
@@ -51,7 +52,7 @@ public class AI {
 
         int bestScore = 0;
         String bestSpot = null;
-        int score;
+
 
         String[] availableSpots = boardClone.getAvailableSpots();
         for(String availableSpot: availableSpots) {
@@ -80,7 +81,7 @@ public class AI {
 
         int bestScore = 0;
         String bestSpot = null;
-        int score;
+
 
 
         String[] availableSpots = boardClone.getAvailableSpots();
@@ -109,11 +110,11 @@ public class AI {
         if( gameState.finished(board) && gameState.getWinnerToken() != null ) {
             String winnerToken = (gameState.getWinnerToken());
             if(winnerToken.equals(token)) {
-                return -1;
+                return -1 - depth;
             } else if (winnerToken.equals(opponentToken)) {
-                return 1;
+                return 1 - depth;
             }
         }
-        return 0;
+        return 0 - depth;
     }
 }
