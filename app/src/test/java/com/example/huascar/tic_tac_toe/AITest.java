@@ -45,12 +45,12 @@ public class AITest {
     }
 
     @Test
-    public void testMinimizedSpotCaseWinning() {
+    public void testMaximizedSpotCaseWinning() {
         newGrid = new String[]{"X", "O", "X",
                                "O", "X", "5",
                                "O", "7", "8"};
         board.setGrid(newGrid);
-        assertEquals( "8", miniMax.minimizedSpot(board, 0)[0] );
+        assertEquals( "8", miniMax.maximizedSpot(board, 0)[0] );
     }
 
     @Test
