@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">tic-tac-toe</string>
-    <string name="first_player_prompt">Choose 1st Player</string>
+    <string name="first_player_prompt">Choose 1st Player:</string>
     <string name="human">Human</string>
     <string name="Bot">Bot</string>
-    <string name="token_prompt">Choose Token</string>
+    <string name="token_prompt">Choose Token:</string>
     <string name="token_X">X</string>
     <string name="token_o">O</string>
     <string name="next">></string>
-    <string name="second_player_prompt">Choose 2nd Player</string>
+    <string name="second_player_prompt">Choose 2nd Player:</string>
     <string name="previous"><![CDATA[<]]></string>
     <string name="play">PLAY</string>
     <string name="zero">0</string>
