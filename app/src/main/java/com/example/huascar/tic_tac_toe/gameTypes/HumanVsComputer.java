@@ -16,6 +16,8 @@ import com.example.huascar.tic_tac_toe.HumanPlayer;
 import com.example.huascar.tic_tac_toe.Player;
 import com.example.huascar.tic_tac_toe.R;
 
+import org.w3c.dom.Text;
+
 /**
  * Created by huascar on 11/04/2018.
  */
@@ -113,5 +115,11 @@ public class HumanVsComputer extends AppCompatActivity {
         gridSeven.setText(grid[6]);
         gridEigth.setText(grid[7]);
         gridNine.setText(grid[8]);
+    }
+
+    public void resetButton(View textView) {
+        TextView resetButton = (TextView) textView;
+        board.reset();
+        updateGrid();
     }
 }
