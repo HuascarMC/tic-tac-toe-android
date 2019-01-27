@@ -102,4 +102,9 @@ public class HumanVsHuman extends AppCompatActivity {
         gridEigth.setText(grid[7]);
         gridNine.setText(grid[8]);
     }
+
+    public void resetButton(View textView) {
+        board.reset();
+        updateGrid();
+    }
 }

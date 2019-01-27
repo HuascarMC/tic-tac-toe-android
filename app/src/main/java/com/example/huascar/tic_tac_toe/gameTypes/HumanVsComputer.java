@@ -118,7 +118,6 @@ public class HumanVsComputer extends AppCompatActivity {
     }
 
     public void resetButton(View textView) {
-        TextView resetButton = (TextView) textView;
         board.reset();
         updateGrid();
     }
