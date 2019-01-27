@@ -95,6 +95,7 @@ public class HumanVsComputer extends AppCompatActivity {
             updateGrid();
             computerPlayer.play(board);
             updateGrid();
+        } else {
             if(gameState.finished(board)) {
                 result.setText(String.format("%s wins!", gameState.getWinnerToken()));
             }
