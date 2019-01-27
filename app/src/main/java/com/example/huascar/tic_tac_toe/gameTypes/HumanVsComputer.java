@@ -37,7 +37,7 @@ public class HumanVsComputer extends AppCompatActivity {
     private TextView gridFive;
     private TextView gridSix;
     private TextView gridSeven;
-    private TextView gridEigth;
+    private TextView gridEight;
     private TextView gridNine;
     private TextView result;
 
@@ -53,7 +53,7 @@ public class HumanVsComputer extends AppCompatActivity {
         gridFive = findViewById(R.id.grid_1);
         gridSix = findViewById(R.id.grid_8);
         gridSeven = findViewById(R.id.grid_4);
-        gridEigth = findViewById(R.id.grid_7);
+        gridEight = findViewById(R.id.grid_7);
         gridNine = findViewById(R.id.grid_);
         result = findViewById(R.id.result);
 
@@ -113,7 +113,7 @@ public class HumanVsComputer extends AppCompatActivity {
         gridFive.setText(grid[4]);
         gridSix.setText(grid[5]);
         gridSeven.setText(grid[6]);
-        gridEigth.setText(grid[7]);
+        gridEight.setText(grid[7]);
         gridNine.setText(grid[8]);
     }
 
